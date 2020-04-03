@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,600,700,800, 800i, 900&display=swap');
+
+$background: #555;
+
+#homePage{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    background-color: $background;
+    font-family: 'myFirstFont',Helvetica,'Helvetica Neue',Arial,sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+
+#cardsContainer{
+    display: flex;    
+}
+
+
+  ///////////// cards
+
+.container {
+    position: relative;
+    padding: 20px;
+    
+}
+
+.container .card {
+    position: relative;
+    width: 220px;
+    height: 310.5px;
+    background: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgb(0, 0, 0), 0 0 7px#000000 inset;
+
+}
+
+.container .card:hover {
+    transition: 1s;
+    box-shadow: 0 0 18px rgb(255, 253, 253), 0 0 7px#000000 inset;
+}
+
+
+
+
+//blue circle
+.container .card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1BBFE9;
+    clip-path: circle(1px at 100% 1%);
+    transition: 0.7s ease-in-out;
+}
+
+.container .card:hover:before {
+    clip-path: circle(500px at 80% -20%);
+}
+
+
+/// 111
+.container .card:after {
+    content: "111";
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 12em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.04);
+}
+
+.container .card .imgBx {
+    position: absolute;
+    top: 70%;
+    transform: translateY(-75%);
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+
+.container .card:hover .imgBx {
+    top: 0%;
+    transform: translateY(-18%) rotate(-20deg);
+
+    /* bug  */
+}
+
+.container .card .imgBx img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(20deg);
+    width: 160px;
+}
+
+.container .card .contentBx {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 90;
+}
+
+.container .card:hover .contentBx {
+    height: 210px;
+}
+
+.container .card .contentBx h2 {
+    margin-bottom: 0px;
+    font-size: 40px;
+    letter-spacing: 2px;
+    color: #fff;
+    opacity: 1;
+}
+
+.container .card:hover .contentBx h2{
+    transition: .8s;
+    opacity: 0;
+}
+
+
+.container .card .contentBx .description {
+    padding: 8px 20px;
+    transition: .3s;
+    visibility: hidden;
+    opacity: 0;
+
+}
+
+
+.container .card:hover .contentBx .description {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: .3s;
+}
+
+
+#chordsCard{
+
+    font-size: 38px;
+
+
+}
+
+#intervalsCard{
+    font-size: 33px;
+    padding-top: 8px;
+    letter-spacing: 0px;
+
+}
+
+
+
+

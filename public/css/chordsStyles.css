@@ -1,0 +1,67 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,900);
+@font-face {
+  font-family: "myFirstFont";
+  src: url("BIG JOHN.otf");
+}
+
+body {
+  margin: 0;
+}
+
+#chordRecognition {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  background-color: #222;
+  border: 2.6em solid #e2bbe8;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 7fr;
+      grid-template-rows: 1fr 1fr 7fr;
+}
+
+#h1ChordRecog {
+  font-size: 10vw;
+  color: #e2bbe8;
+  font-family: 'myFirstFont',Helvetica,'Helvetica Neue',Arial,sans-serif;
+  padding-left: 3vw;
+  line-height: 95%;
+  -ms-grid-row: 1;
+  grid-row: 1/1;
+}
+
+#keyboardImg {
+  height: 15vw;
+  margin-left: 44vw;
+  margin-top: 1vh;
+  fill: white;
+  position: absolute;
+}
+
+#pressSpace {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2vw;
+  font-weight: 100;
+  cursor: default;
+  letter-spacing: 4px;
+  text-align: center;
+  margin: auto;
+}
+
+.answerContainer {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+/*# sourceMappingURL=chordsStyles.css.map */

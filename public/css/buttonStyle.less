@@ -1,4 +1,4 @@
-@circle-size: 240px;
+@circle-size: 200px;
 @outside-circle-size: @circle-size + 0px;
 @outside-circle-border: 0px;
 @outside-circle-margin: ((@outside-circle-size / 2) + @outside-circle-border) * -1;
@@ -9,7 +9,7 @@
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 55px;
+  font-size: 45px;
   font-family: 'Open Sans', sans-serif;
 
   &:before{
@@ -35,7 +35,7 @@
   }
   
   &.circle{
-    background: lighten(#222, 6%);;
+    background: lighten(rgb(97, 195, 236), 6%);;
     border: none;
     border-radius: 900px;
     color: #ededed;
@@ -50,7 +50,7 @@
 
     
     &:hover {
-      background: #222;
+      background: rgb(156, 221, 247);
       padding: -2px;
       box-shadow: 0 0 15px #222, 0 0 30px#e2bbe8 inset;
       letter-spacing: 3px;

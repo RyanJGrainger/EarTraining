@@ -2,7 +2,7 @@ import React from "react";
 import Chords from "../Chords";
 
 
-var Button = props =>  <p onClick={() => { alert("srvdbt") }} className="button circle"> {props.chordName} </p>
+var Button = props =>  <p onClick={() => { alert("srvdbt") }} className="answerCircle"> {props.chordName} </p>
 
 var AnswerButtons = () => 
   (

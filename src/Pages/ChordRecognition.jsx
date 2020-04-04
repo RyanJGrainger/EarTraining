@@ -13,8 +13,7 @@ function ChordRecognition(){
     return (
 
                     <div id="chordRecognition">
-                        <h1 id="h1ChordRecog">Chord Recognition</h1>
-                        <img id="keyboardImg" src="../css/keyboard2.svg" alt="keyboardimage"/>
+                        {/* <img id="keyboardImg" src="../css/keyboard2.svg" alt="keyboardimage"/> */}
                         {/* <ProgressBar /> */}
                         <PlayButton/>
                         <AnswersButtons />

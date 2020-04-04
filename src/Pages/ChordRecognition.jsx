@@ -3,19 +3,20 @@ import PlayButton from "../components/PlayButton";
 import AnswersButtons from "../components/AnswersButtons";
 
 
-// function playSound(){
-//     var x = new Audio("../sounds/pianoNotes/note10.mp3")
-//     x.play();
-// }
+function playSound(){
+    var x = new Audio("../sounds/pianoNotes/note10.mp3")
+    // x.play();
+    document.getElementById("audio").play();
+
+
+}
 
 
 function ChordRecognition(){
     return (
 
                     <div id="chordRecognition">
-                        {/* <img id="keyboardImg" src="../css/keyboard2.svg" alt="keyboardimage"/> */}
-                        {/* <ProgressBar /> */}
-                        <PlayButton/>
+                        <img onClick={playSound} className="tempPlayButton" src="https://image.flaticon.com/icons/svg/482/482059.svg" alt="playbutton"/>
                         <AnswersButtons />
                     </div>
         

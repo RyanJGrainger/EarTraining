@@ -3,7 +3,9 @@ import React from "react";
 function Header(){
 
     let styles = {
-        height: '150px',
+        height: '10vh',
+        fontSize: '8vh',
+        fontFamily: 'Nunito',
         margin: '0',
         textAlign: 'center',
         backgroundColor: '#2d2d2d',

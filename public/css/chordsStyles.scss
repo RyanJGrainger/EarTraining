@@ -4,19 +4,20 @@ body{
   margin: 0;
 }
 
-#chordRecognition{
-  height: 90vh;
-  margin: 0;
-  background-color: $background;
-  display: grid;
-  grid-template-rows: 2fr 4fr 2fr;
-}
-
 @media (max-width: 1000px){
+
+  #chordRecognition{
+    height: 90vh;
+    margin: 0;
+    background-color: $background;
+    display: grid;
+    grid-template-rows: 2fr 4fr 2fr;
+  }
 
   .tempPlayButton {
     margin: auto;
     height: 6vh;
+    cursor: pointer;
   }
   
   .answerContainer {
@@ -53,9 +54,18 @@ body{
 
 @media (min-width: 1001px){
 
+  #chordRecognition{
+    height: 90vh;
+    margin: 0;
+    background-color: $background;
+    display: grid;
+    grid-template-rows: 4fr 5fr 2fr;
+  }
+
   .tempPlayButton {
     margin: auto;
     height: 8vh;
+    cursor: pointer;
   }
 
   .answerContainer {
@@ -71,6 +81,8 @@ body{
     border-radius: 50%;
     color: #FFF;
     background: darken($background,2%);
+
+    cursor: pointer;
 
     width: 17vh;
     line-height: 17vh;

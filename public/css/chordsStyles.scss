@@ -12,7 +12,14 @@ body{
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   display: grid;
-   grid-template-rows: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 4fr 2fr;
+}
+
+
+.tempPlayButton {
+  width: 50%;
+  margin: auto;
+  height: 100px;
 }
 
 .answerContainer {
@@ -41,11 +48,8 @@ body{
   font-size: 53px;
 }
 
-.tempPlayButton {
-  width: 50%;
-  margin: auto;
-  height: 200px;
-}
+
+
 
 
 /////////////////////////////

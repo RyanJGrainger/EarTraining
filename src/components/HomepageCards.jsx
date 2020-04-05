@@ -5,7 +5,7 @@ var Card = props => {
     return <div class="container" >
             <div class="card" >
                 <div class="imgBx">
-                    <img src={props.cardImage}/>
+                    <img src={props.cardImage} alt="img"/>
                 </div>
                 <div class="contentBx" >
                     <h2 id={props.cssClass}>{props.cardName}</h2>

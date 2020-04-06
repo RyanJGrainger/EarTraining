@@ -6,7 +6,7 @@ body {
   #chordRecognition {
     height: 90vh;
     margin: 0;
-    background-color: #abe4fa;
+    background-color: #2d2d2d;
     display: -ms-grid;
     display: grid;
     -ms-grid-rows: 2fr 4fr 2fr;
@@ -35,7 +35,7 @@ body {
   .answerCircle {
     border-radius: 50%;
     color: #FFF;
-    background: #a1e1f9;
+    background: #323232;
     width: 13vh;
     height: 13vh;
     line-height: 13vh;
@@ -54,7 +54,7 @@ body {
   #chordRecognition {
     height: 90vh;
     margin: 0;
-    background-color: #abe4fa;
+    background-color: #2d2d2d;
     display: -ms-grid;
     display: grid;
     -ms-grid-rows: 4fr 5fr 2fr;
@@ -83,7 +83,7 @@ body {
   .answerCircle {
     border-radius: 50%;
     color: #FFF;
-    background: #a1e1f9;
+    background: #323232;
     cursor: pointer;
     width: 17vh;
     line-height: 17vh;

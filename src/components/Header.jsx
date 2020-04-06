@@ -1,19 +1,14 @@
 import React from "react";
 
-
 function Header(){
 
-    let styles = {
-        height: '10vh',
-        fontSize: '8vh',
-        fontFamily: 'Nunito',
-        margin: '0',
-        textAlign: 'center',
-        backgroundColor: '#2d2d2d',
-    };
+    return (
+        <div className="header">
+            <img id="homeIcon" src="../css/home-run.svg" alt="homeicon"/>
+            <h1 id="headerTitle"></h1>
+        </div>
 
-    return <h1 style={styles}>eartrain.me</h1>;
-
+    ) 
 
 }
 

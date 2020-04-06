@@ -1,4 +1,4 @@
-$background: rgb(171, 228, 250);
+$background: #2d2d2d;
 
 body{
   margin: 0;
@@ -34,7 +34,7 @@ body{
   .answerCircle{
     border-radius: 50%;
     color: #FFF;
-    background: darken($background,2%);
+    background: lighten($background,2%);
   
     width: 13vh;
     height: 13vh;
@@ -80,7 +80,7 @@ body{
   .answerCircle{
     border-radius: 50%;
     color: #FFF;
-    background: darken($background,2%);
+    background: lighten($background,2%);
 
     cursor: pointer;
 

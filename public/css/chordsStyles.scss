@@ -2,6 +2,13 @@ $background: #2d2d2d;
 
 body{
   margin: 0;
+  
+}
+
+*{
+  transition-property: all;
+  transition-duration: 0.6s;
+  transition-timing-function: ease;
 }
 
 @media (max-width: 1000px){
@@ -22,8 +29,8 @@ body{
   
   .answerContainer {
     // width: 80vw;
-    padding-left: 8vw;
-    padding-right: 8vw;
+    padding-left: 9vw;
+    padding-right: 9vw;
     display: inline-flex;
     align-items: center;
     flex-wrap: wrap;
@@ -36,12 +43,12 @@ body{
     color: #FFF;
     background: lighten($background,2%);
   
-    width: 13vh;
-    height: 13vh;
-    line-height: 13vh;
+    width: 12vh;
+    height: 12vh;
+    line-height: 12vh;
     font-size: 3vh;
     margin: 1vh;
-    border: 0.3vh solid white;
+    border: 0.2vh solid white;
   
     overflow: hidden;
     font-family: 'Nunito', sans-serif;
@@ -50,6 +57,14 @@ body{
     text-decoration: none;
   }
 
+  .answerCircle:hover{
+    background: lighten($background,10%);
+
+  }
+
+  //////////////////////////////////////
+  // LAPTOP
+  /////////////////////////////////////
 }
 
 @media (min-width: 1001px){
@@ -88,13 +103,19 @@ body{
     line-height: 17vh;
     font-size: 4vh;
     margin: 1.5vh;
-    border: 0.3vh solid white;
+    border: 0.2vh solid white;
 
     overflow: hidden;
     font-family: 'Nunito', sans-serif;
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
+  }
+
+  .answerCircle:hover{
+    background: lighten($background,10%);
+    letter-spacing: 3px;
+
   }
 
 }

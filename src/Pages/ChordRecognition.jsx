@@ -5,11 +5,12 @@ import Chords from "../Chords"
 
 
 function playChord(){
-    var root = Math.floor(Math.random() * 10) + 1;
+    var root = Math.floor(Math.random() * 13) + 1;
     var whichChord = Math.floor(Math.random() * 11) + 1;
 
     var note1 = new Howl({
         src: ["../sounds/rhodesNotes/note" + root + ".wav"],
+        // html5: true,
         volume: 0.33
       });
 
@@ -52,11 +53,11 @@ function playChord(){
 
 
 
-function ChordRecognition(){
+function ChordRecognition(props){
     return (
         <div id="chordRecognition">
             <img onClick={playChord} className="tempPlayButton" src="../css/play-button.svg" alt="playbutton"/>
-            <AnswersButtons />
+            <AnswersButtons className="animated fadeIn" />
         </div>
     );
 }

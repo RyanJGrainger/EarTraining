@@ -6,7 +6,7 @@ var Button = props =>  <p onClick={() => { alert("srvdbt") }} className="answerC
 
 var AnswerButtons = () => 
   (
-    <div className="answerContainer">
+    <div className="answerContainer animated fadeIn">
       {Chords.map( Chords => 
           (
             <Button

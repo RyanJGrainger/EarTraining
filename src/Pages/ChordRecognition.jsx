@@ -56,8 +56,8 @@ function playChord(){
 function ChordRecognition(props){
     return (
         <div id="chordRecognition">
-            <img onClick={playChord} className="tempPlayButton" src="../css/play-button.svg" alt="playbutton"/>
-            <AnswersButtons className="animated fadeIn" />
+            <img onClick={playChord} className="tempPlayButton animated fadeIn" src="../css/play-button.svg" alt="playbutton"/>
+            <AnswersButtons />
         </div>
     );
 }

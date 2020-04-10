@@ -3,36 +3,25 @@ import ChordRecognition from "./Pages/ChordRecognition"
 import IntervalRecognition from "./Pages/IntervalRecognition"
 import Homepage from "./Pages/Homepage";
 import Header from "./components/Header"
-import { useState } from "react";
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 
 function App(props){
     
-    var [page, changePage] = useState(<Homepage goToChords={controlPage}/>)
-
-
-    function controlPage(){
-        changePage(page = <ChordRecognition/>)
-    }
-
-
     return (
-        <div>
-            <Header goHome={controlPage}/>
-            {page}
-        </div>
+        <Router>
+            <div>
+            <Header/>
+            <Switch>
+                <Route path="/" exact component={Homepage} />
+                <Route path="/chord-recognition" component={ChordRecognition} />
+                <Route path="/interval-recognition" component={IntervalRecognition} />
+            </Switch>
+            </div>
+        </Router>    
     );
 }
 
 export default App;
 
 
-
-// var isChordRecog = false;
-
-{   
-    {/* isChordRecog ? 
-        <ChordRecognition />
-    :
-        <Homepage /> */}
-}

@@ -1,11 +1,15 @@
 import React from "react";
+import {Link} from 'react-router-dom';
+
 
 function Header(props){
 
     return (
         <div className="header">
-            <img onClick={props.goHome} id="homeIcon" src="../css/home-run.svg" alt="homeicon"/>
-            <h1 id="headerTitle"></h1>
+            <Link to='/'>
+                <img id="homeIcon" src="../css/home-run.svg" alt="homeicon"/>
+            </Link>
+            <h1 id="headerTitle">eartrain.me</h1>
         </div>
 
     ) 

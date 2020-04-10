@@ -39,7 +39,6 @@ $background: #2d2d2d;
     background: #232323;
     border-radius: 20px;
     overflow: hidden;
-    cursor: pointer;
     box-shadow: 0 0 10px rgb(0, 0, 0), 0 0 7px#000000 inset;
 
 }
@@ -135,8 +134,7 @@ $background: #2d2d2d;
 }
 
 
-.container .card .contentBx .description {
-    padding: 8px 20px;
+.container .card .contentBx .links {
     transition: .3s;
     visibility: hidden;
     opacity: 0;
@@ -144,25 +142,32 @@ $background: #2d2d2d;
 }
 
 
-.container .card:hover .contentBx .description {
+.container .card:hover .contentBx .links {
     opacity: 1;
     visibility: visible;
     transition-delay: .3s;
 }
 
+#levelUpLink {
+    cursor: pointer;
+    font-size: 25px;
+    color: white;
+}
+
+#practiceLink{
+    font-size: 25px;
+    color: white;
+}
+
 
 #chordsCard{
-
     font-size: 38px;
-
-
 }
 
 #intervalsCard{
     font-size: 33px;
     padding-top: 8px;
     letter-spacing: 0px;
-
 }
 
 

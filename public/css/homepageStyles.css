@@ -39,7 +39,6 @@
   background: #232323;
   border-radius: 20px;
   overflow: hidden;
-  cursor: pointer;
   -webkit-box-shadow: 0 0 10px black, 0 0 7px #000000 inset;
           box-shadow: 0 0 10px black, 0 0 7px #000000 inset;
 }
@@ -138,19 +137,29 @@
   opacity: 0;
 }
 
-.container .card .contentBx .description {
-  padding: 8px 20px;
+.container .card .contentBx .links {
   -webkit-transition: .3s;
   transition: .3s;
   visibility: hidden;
   opacity: 0;
 }
 
-.container .card:hover .contentBx .description {
+.container .card:hover .contentBx .links {
   opacity: 1;
   visibility: visible;
   -webkit-transition-delay: .3s;
           transition-delay: .3s;
+}
+
+#levelUpLink {
+  cursor: pointer;
+  font-size: 25px;
+  color: white;
+}
+
+#practiceLink {
+  font-size: 25px;
+  color: white;
 }
 
 #chordsCard {

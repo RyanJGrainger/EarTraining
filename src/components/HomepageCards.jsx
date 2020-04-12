@@ -4,22 +4,24 @@ import {Link} from 'react-router-dom';
 
 
 var Card = props => {
-    return <div class="container" >
-            <div class="card" >
+    return <div className="container" >
+            <div className="card" >
 
-                <div class="imgBx">
-                    <img src={props.cardImage} alt="img"/>
+                <div className="imgBx">
+                    <Link to="/chord-recognition">
+                        <img src={props.cardImage} alt="img"/>
+                    </Link>
                 </div>
 
-                <div class="contentBx" >
+                <div className="contentBx" >
 
                     <h2 id={props.cssClass}>{props.cardName}</h2>
 
-                    <div class="links">
+                    <div className="links">
                         <Link to="/chord-recognition">
                             <p id="levelUpLink">Level UP</p>
                         </Link>
-                            <p id="practiceLink">Practice</p>
+                            <p id="practiceLink">listen</p>
                     </div>
                     
                 </div>

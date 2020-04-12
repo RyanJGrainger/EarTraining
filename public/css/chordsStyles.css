@@ -15,7 +15,8 @@ body {
   #chordRecognition {
     height: 90vh;
     margin: 0;
-    background-color: #2d2d2d;
+    background: -webkit-gradient(linear, left bottom, left top, from(#2d2d2d), color-stop(97%, #2d2d2d), to(black));
+    background: linear-gradient(0deg, #2d2d2d 0%, #2d2d2d 97%, black 100%);
     display: -ms-grid;
     display: grid;
     -ms-grid-rows: 2fr 4fr 2fr;
@@ -44,7 +45,7 @@ body {
   .answerCircle {
     border-radius: 50%;
     color: #FFF;
-    background: #323232;
+    background: #373737;
     width: 12vh;
     height: 12vh;
     line-height: 12vh;
@@ -66,7 +67,8 @@ body {
   #chordRecognition {
     height: 90vh;
     margin: 0;
-    background-color: #2d2d2d;
+    background: -webkit-gradient(linear, left bottom, left top, from(#2d2d2d), color-stop(97%, #2d2d2d), to(black));
+    background: linear-gradient(0deg, #2d2d2d 0%, #2d2d2d 97%, black 100%);
     display: -ms-grid;
     display: grid;
     -ms-grid-rows: 4fr 5fr 2fr;
@@ -95,7 +97,7 @@ body {
   .answerCircle {
     border-radius: 50%;
     color: #FFF;
-    background: #323232;
+    background: #373737;
     cursor: pointer;
     width: 17vh;
     line-height: 17vh;
@@ -112,5 +114,11 @@ body {
     background: #474747;
     letter-spacing: 3px;
   }
+}
+
+#testingLink {
+  display: inline-block;
+  width: 50%;
+  margin: auto;
 }
 /*# sourceMappingURL=chordsStyles.css.map */

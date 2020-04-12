@@ -6,10 +6,14 @@ function Header(props){
 
     return (
         <div className="header">
-            <Link to='/'>
+
+            <Link id="homeLink" to='/'>
                 <img id="homeIcon" src="../css/home-run.svg" alt="homeicon"/>
             </Link>
-            <h1 id="headerTitle">eartrain.me</h1>
+
+
+            <h1 id="headerTitle">eartrain.me</h1>    
+
         </div>
 
     ) 

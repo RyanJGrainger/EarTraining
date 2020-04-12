@@ -1,23 +1,43 @@
 .header {
     margin: 0;
     height: 10vh;
-    background-color: rgb(171, 228, 250);
+    background: linear-gradient(0deg, rgba(254,255,255,1) 26%, rgba(203,203,203,1) 100%);
     display: flex;
-    /* justify-content: center;
-    justify-content: space-evenly; */
-}
-
-#headerTitle {
-    margin: 0;
-    font-family: 'myFirstFont',Helvetica,'Helvetica Neue',Arial,sans-serif;
-    font-size: 10vh;
-    color: #2d2d2d;
-
 }
 
 #homeIcon {
-    height: 11vh;
-    cursor: pointer;
+    position: absolute;
+    padding-top: .2vh;
+    margin-left: 30vw;
+    height: 10vh;
+}
+
+
+#headerTitle {
+    margin: auto;
+    /* font-family: 'myFirstFont',Helvetica,'Helvetica Neue',Arial,sans-serif; */
+    font-family: 'Comfortaa', cursive;
+    font-size: 5vh;
+    color: #2d2d2d;
+    padding-top: 1vh;
+    letter-spacing: -.1vw;
+    /* letter-spacing: 0vw; */
+
+    cursor: default;
+
 
 }
 
+
+@media (max-width: 1000px){
+
+    #homeIcon{
+        margin-left: 3vw;
+    }
+
+    #headerTitle{
+        font-size: 5vh;
+        letter-spacing: -.5vw;
+    }
+
+}

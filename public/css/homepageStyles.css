@@ -8,23 +8,18 @@
   height: 90vh;
   width: 100vw;
   margin: 0;
-  background-color: #2d2d2d;
+  background: -webkit-gradient(linear, left bottom, left top, from(#2d2d2d), color-stop(97%, #2d2d2d), to(black));
+  background: linear-gradient(0deg, #2d2d2d 0%, #2d2d2d 97%, black 100%);
   font-family: 'myFirstFont',Helvetica,'Helvetica Neue',Arial,sans-serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 #cardsContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .container {
@@ -34,8 +29,8 @@
 
 .container .card {
   position: relative;
-  width: 220px;
-  height: 310.5px;
+  width: 18vw;
+  height: 25vh;
   background: #232323;
   border-radius: 20px;
   overflow: hidden;
@@ -74,10 +69,10 @@
   position: absolute;
   top: 30%;
   left: -20%;
-  font-size: 12em;
+  font-size: 27vh;
   font-weight: 800;
   font-style: italic;
-  color: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.014);
 }
 
 .container .card .imgBx {
@@ -94,25 +89,27 @@
 
 .container .card:hover .imgBx {
   top: 0%;
-  -webkit-transform: translateY(-18%) rotate(-20deg);
-          transform: translateY(-18%) rotate(-20deg);
+  -webkit-transform: translateY(-20%);
+          transform: translateY(-20%);
+  opacity: 0;
   /* bug  */
 }
 
 .container .card .imgBx img {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%) rotate(20deg);
-          transform: translate(-50%, -50%) rotate(20deg);
-  width: 160px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 15vh;
+  opacity: 1;
 }
 
 .container .card .contentBx {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 100px;
+  height: 14vh;
   text-align: center;
   -webkit-transition: 1s;
   transition: 1s;
@@ -120,15 +117,13 @@
 }
 
 .container .card:hover .contentBx {
-  height: 210px;
+  height: 36vh;
 }
 
 .container .card .contentBx h2 {
-  margin-bottom: 0px;
-  font-size: 40px;
-  letter-spacing: 2px;
   color: #fff;
   opacity: 1;
+  padding-top: 2vh;
 }
 
 .container .card:hover .contentBx h2 {
@@ -152,23 +147,70 @@
 }
 
 #levelUpLink {
-  cursor: pointer;
-  font-size: 25px;
+  font-size: 30px;
   color: white;
 }
 
 #practiceLink {
-  font-size: 25px;
+  font-size: 30px;
   color: white;
 }
 
-#chordsCard {
-  font-size: 38px;
+#intervalsCard {
+  font-size: 2.7vw;
+  letter-spacing: 0px;
 }
 
-#intervalsCard {
-  font-size: 33px;
-  padding-top: 8px;
-  letter-spacing: 0px;
+#chordsCard {
+  font-size: 3vw;
+  letter-spacing: .1vw;
+}
+
+#modesCard {
+  font-size: 3vw;
+  letter-spacing: .1vw;
+}
+
+.circular-chart {
+  padding-top: 6vh;
+  padding-bottom: 2vh;
+  max-height: 330px;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #222;
+  stroke-width: 1.5;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  -webkit-animation: progress 1s ease-out forwards;
+          animation: progress 1s ease-out forwards;
+}
+
+@-webkit-keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.circular-chart.orange .circle {
+  stroke: #900c3f;
+}
+
+.percentage {
+  font-family: 'myFirstFont',Helvetica,'Helvetica Neue',Arial,sans-serif;
+  fill: white;
+  font-size: 0.4em;
+  text-anchor: middle;
 }
 /*# sourceMappingURL=homepageStyles.css.map */

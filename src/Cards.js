@@ -15,7 +15,7 @@ var Cards = [
     {cardName:"Modes", 
     cardDescription:"Your goal is to identify the type of Mode that you hear.", 
     cardImage:"https://image.flaticon.com/icons/svg/2675/2675563.svg",
-    cssClass:"container"
+    cssClass:"modesCard"
     },
     
 

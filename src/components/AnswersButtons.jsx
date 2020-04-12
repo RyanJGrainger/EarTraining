@@ -2,11 +2,11 @@ import React from "react";
 import Chords from "../Chords";
 
 
-var Button = props =>  <p onClick={() => { alert("srvdbt") }} className="answerCircle"> {props.chordName} </p>
+var Button = props =>  <p onClick={() => { alert("srvdbt") }} className="answerCircle animated flipInX"> {props.chordName} </p>
 
 var AnswerButtons = () => 
   (
-    <div className="answerContainer animated flipInX">
+    <div className="answerContainer">
       {Chords.map( Chords => 
           (
             <Button

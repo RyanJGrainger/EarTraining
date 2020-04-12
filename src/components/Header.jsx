@@ -14,6 +14,8 @@ function Header(props){
 
             <h1 id="headerTitle">eartrain.me</h1>    
 
+            <img id="logoutIcon" src="../css/logout.svg"/>
+
         </div>
 
     ) 

@@ -3,7 +3,7 @@ import React from 'react';
 function ProgressCircle(){
 
     return ( 
-        <div>
+        <div class="animated fadeIn">
             <svg viewBox="0 0 36 36" class="circular-chart orange">
                 <path class="circle-bg"
                     d="M18 2.0845

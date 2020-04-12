@@ -31,7 +31,7 @@ var Card = props => {
 
 
 
-var HomepageCards = () =>  <div className="animated fadeIn" id="cardsContainer">{Cards.map(Card)} </div>
+var HomepageCards = () =>  <div className="animated bounceInUp delay-2s" id="cardsContainer">{Cards.map(Card)} </div>
     
 
 export default HomepageCards;

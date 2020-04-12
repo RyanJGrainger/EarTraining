@@ -24,8 +24,13 @@
     /* letter-spacing: 0vw; */
 
     cursor: default;
+}
 
-
+#logoutIcon{
+    position: absolute;
+    padding-top: 2vh;
+    margin-left: 85vw;
+    height: 7vh;
 }
 
 

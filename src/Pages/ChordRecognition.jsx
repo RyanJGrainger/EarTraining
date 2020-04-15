@@ -26,9 +26,10 @@ export default ChordRecognition;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+var chordRecognitionLevel = 1;
 var numberOfChords = Chords.length;
 var chordPlayedIndex = Math.floor(Math.random() * numberOfChords);
-var rootNote = Math.floor(Math.random() * 22) + 1;
+var rootNote = Math.floor(Math.random() * 20) + 1;
 var correctAnswers = [];
 
 function Button(props) {
@@ -49,27 +50,42 @@ function Button(props) {
 function isCorrectAnswer(buttonClicked){
     if(buttonClicked === Chords[chordPlayedIndex].chordID){
         correctAnswers.push(chordPlayedIndex);
-        do {
-          chordPlayedIndex = Math.floor(Math.random() * 11) + 1;
-        } while (correctAnswers.includes(chordPlayedIndex));
-
-        rootNote = Math.floor(Math.random() * 22) + 1;
-
-        return true;
+        if (correctAnswers.length === numberOfChords){
+          alert("level complete")
+        }
+        else {
+          var correctSoundFx = new Howl({
+            src: ["../sounds/soundEffects/correct.mp3"],
+            volume: 0.3
+        });
+        correctSoundFx.play();
+          do {
+            newRandomChord()
+          } while (correctAnswers.includes(chordPlayedIndex));
+          rootNote = Math.floor(Math.random() * 20) + 1;
+          return true;
+        }  
     }
 
     else{
-        return false;
+        resetLevel();
     }
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function newRandomChord(){
+  chordPlayedIndex = Math.floor(Math.random() * numberOfChords);
+}
+
+function resetLevel(){
+   ////do this
+}
 
 function playChord(){
 
   var note1 = new Howl({
       src: ["../sounds/pianoNotes/note" + rootNote + ".wav"],
-      html5: true,
+      // html5: true,
       volume: 0.25
     });
 

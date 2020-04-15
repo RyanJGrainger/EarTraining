@@ -17,6 +17,7 @@ var Cards = [
     cardImage:"./css/guitar.svg",
     cssClass:"modesCard"
     },
+
     
 
 

@@ -75,6 +75,8 @@ body {
     cursor: pointer;
     padding-bottom: 20px;
     padding-top: 40px;
+    display: block;
+    margin: auto;
   }
   .answerContainer {
     padding-left: 29vw;

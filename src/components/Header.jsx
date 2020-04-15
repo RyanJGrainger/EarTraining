@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 function Header(props){
 
     return (
-        <div className="header">
+        <div className="header animated fadeIn">
 
             <Link id="homeLink" to='/'>
                 <img id="homeIcon" src="../css/home-run.svg" alt="homeicon"/>
@@ -15,6 +15,8 @@ function Header(props){
             <h1 id="headerTitle">eartrain.me</h1>    
 
             <img id="logoutIcon" src="../css/logout.svg"/>
+
+            <p id="userNameHeader">ryang199</p>
 
         </div>
 

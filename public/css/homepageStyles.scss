@@ -45,7 +45,7 @@ $background: #2d2d2d;
 }
 
 .container .card:hover {
-    transition: 1s;
+    transition: .3s;
     box-shadow: 0 0 18px rgb(255, 253, 253), 0 0 7px#000000 inset;
 }
 
@@ -104,7 +104,7 @@ $background: #2d2d2d;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 15vh;
+    width: 16vh;
     opacity: 1;
 }
 
@@ -114,7 +114,7 @@ $background: #2d2d2d;
     width: 100%;
     height: 14vh;
     text-align: center;
-    transition: 1s;
+    transition: .5s;
     z-index: 90;
 }
 
@@ -129,13 +129,13 @@ $background: #2d2d2d;
 }
 
 .container .card:hover .contentBx h2{
-    transition: .8s;
+    transition: .2s;
     opacity: 0;
 }
 
 
 .container .card .contentBx .links {
-    transition: .3s;
+    transition: .2s;
     visibility: hidden;
     opacity: 0; 
 }
@@ -144,7 +144,7 @@ $background: #2d2d2d;
 .container .card:hover .contentBx .links {
     opacity: 1;
     visibility: visible;
-    transition-delay: .3s;
+    transition-delay: .2s;
 }
 
 #levelUpLink {
@@ -197,7 +197,7 @@ $background: #2d2d2d;
   
   .circle {
     fill: none;
-    stroke-width: 1.8;
+    stroke-width: 1.9;
     stroke-linecap: round;
     animation: progress 2s ease-out forwards;
   }

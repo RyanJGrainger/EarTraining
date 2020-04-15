@@ -33,6 +33,15 @@
     height: 7vh;
 }
 
+#userNameHeader{
+    position: absolute;
+    padding-top: 2vh;
+    margin-left: 89vw;
+    height: 7vh;
+    font-family: 'myFirstFont',Helvetica,'Helvetica Neue',Arial,sans-serif;
+
+}
+
 
 @media (max-width: 1000px){
 

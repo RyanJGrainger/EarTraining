@@ -19,7 +19,7 @@ var Card = props => {
 
                     <div className="links">
                         <Link to="/chord-recognition">
-                            <p id="levelUpLink">Level UP</p>
+                            <p id="levelUpLink">Lvl UP</p>
                         </Link>
                             <p id="practiceLink">listen</p>
                     </div>
@@ -31,7 +31,7 @@ var Card = props => {
 
 
 
-var HomepageCards = () =>  <div className="animated bounceInUp delay-2s" id="cardsContainer">{Cards.map(Card)} </div>
+var HomepageCards = () =>  <div className="animated bounceInUp" id="cardsContainer">{Cards.map(Card)} </div>
     
 
 export default HomepageCards;

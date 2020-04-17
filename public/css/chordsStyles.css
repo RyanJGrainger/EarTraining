@@ -78,6 +78,10 @@ body {
     display: block;
     margin: auto;
   }
+  .tempPlayButton:hover {
+    -webkit-filter: saturate(4) brightness(0.2);
+            filter: saturate(4) brightness(0.2);
+  }
   .answerContainer {
     padding-left: 29vw;
     padding-right: 29vw;

@@ -3,17 +3,25 @@ import Chords from "../Chords";
 import {Howl, Howler} from 'howler';
 import { useState } from 'react';
 
+var chordRecognitionLevel = 2;
+var CurrentChords = Chords.slice(0,chordRecognitionLevel + 1);
+var numberOfChords = CurrentChords.length;
+var chordPlayedIndex = Math.floor(Math.random() * numberOfChords);
+var rootNote = Math.floor(Math.random() * 20) + 1;
+var correctAnswers = [];
+
+
 function ChordRecognition (){
     return(
         <div id="chordRecognition">
             <img onClick={playChord} className="tempPlayButton animated fadeIn" src="../css/play-button3.svg" alt="playbutton"/>
             <div className="answerContainer">
-              {Chords.map( Chords => 
+              {CurrentChords.map( CurrentChords => 
                   (
                     <Button
-                        key={Chords.chordID}
-                        chordName={Chords.chordName}
-                        chordID={Chords.chordID}
+                        key={CurrentChords.chordID}
+                        chordName={CurrentChords.chordName}
+                        chordID={CurrentChords.chordID}
                     />
                   )
                 )}
@@ -26,11 +34,6 @@ export default ChordRecognition;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-var chordRecognitionLevel = 1;
-var numberOfChords = Chords.length;
-var chordPlayedIndex = Math.floor(Math.random() * numberOfChords);
-var rootNote = Math.floor(Math.random() * 20) + 1;
-var correctAnswers = [];
 
 function Button(props) {
 
@@ -48,7 +51,7 @@ function Button(props) {
 }
 
 function isCorrectAnswer(buttonClicked){
-    if(buttonClicked === Chords[chordPlayedIndex].chordID){
+    if(buttonClicked === CurrentChords[chordPlayedIndex].chordID){
         correctAnswers.push(chordPlayedIndex);
         if (correctAnswers.length === numberOfChords){
           alert("level complete")
@@ -90,17 +93,17 @@ function playChord(){
     });
 
   var note2 = new Howl({
-      src: ["../sounds/pianoNotes/note" + (rootNote + Chords[chordPlayedIndex].intervals[0]) + ".wav"],
+      src: ["../sounds/pianoNotes/note" + (rootNote + CurrentChords[chordPlayedIndex].intervals[0]) + ".wav"],
       volume: 0.25
   });
 
   var note3 = new Howl({
-      src: ["../sounds/pianoNotes/note" + (rootNote + Chords[chordPlayedIndex].intervals[1]) + ".wav"],
+      src: ["../sounds/pianoNotes/note" + (rootNote + CurrentChords[chordPlayedIndex].intervals[1]) + ".wav"],
       volume: 0.25
   });
 
   var note4 = new Howl({
-      src: ["../sounds/pianoNotes/note" + (rootNote + Chords[chordPlayedIndex].intervals[2]) + ".wav"],
+      src: ["../sounds/pianoNotes/note" + (rootNote + CurrentChords[chordPlayedIndex].intervals[2]) + ".wav"],
       volume: 0.25
   });
     

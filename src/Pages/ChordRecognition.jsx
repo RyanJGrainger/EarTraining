@@ -3,7 +3,7 @@ import Chords from "../Chords";
 import {Howl, Howler} from 'howler';
 import { useState } from 'react';
 
-var chordRecognitionLevel = 2;
+var chordRecognitionLevel = 11;
 var CurrentChords = Chords.slice(0,chordRecognitionLevel + 1);
 var numberOfChords = CurrentChords.length;
 var chordPlayedIndex = Math.floor(Math.random() * numberOfChords);
@@ -88,7 +88,7 @@ function playChord(){
 
   var note1 = new Howl({
       src: ["../sounds/pianoNotes/note" + rootNote + ".wav"],
-      // html5: true,
+      html5: true,
       volume: 0.25
     });
 

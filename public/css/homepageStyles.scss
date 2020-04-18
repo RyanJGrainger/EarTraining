@@ -30,13 +30,13 @@ $background: #2d2d2d;
 
 .container {
     position: relative;
-    padding: 20px;
+    padding: 10px;
 }
 
 .container .card {
     position: relative;
-    width: 18vw;
-    height: 25vh;
+    width: 200px;
+    height: 150px;
     background: #232323;
     border-radius: 20px;
     overflow: hidden;
@@ -76,7 +76,7 @@ $background: #2d2d2d;
     position: absolute;
     top: 30%;
     left: -20%;
-    font-size: 27vh;
+    font-size: 200px;
     font-weight: 800;
     font-style: italic;
     color: rgba(255, 255, 255, 0.014);
@@ -104,7 +104,7 @@ $background: #2d2d2d;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 16vh;
+    width: 95px;
     opacity: 1;
 }
 
@@ -112,20 +112,20 @@ $background: #2d2d2d;
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 14vh;
+    height: 100px;
     text-align: center;
     transition: .5s;
     z-index: 90;
 }
 
 .container .card:hover .contentBx {
-    height: 36vh;
+    height: 245px;
 }
 
 .container .card .contentBx h2 {
     color: #fff;
     opacity: 1;
-    padding-top: 2vh;
+    padding-top: 25px;
 }
 
 .container .card:hover .contentBx h2{
@@ -158,17 +158,22 @@ $background: #2d2d2d;
 }
 
 #intervalsCard{
-    font-size: 2.7vw;
-    letter-spacing: 0px;
+    font-size: 33px;
+    letter-spacing: -1.2px;
 }
 
 #chordsCard{
-    font-size: 3vw;
+    font-size: 35px;
     letter-spacing: .1vw;
 }
 
 #modesCard{
-    font-size: 3vw;
+    font-size: 35px;
+    letter-spacing: .1vw;
+}
+
+#metreCard{
+    font-size: 35px;
     letter-spacing: .1vw;
 }
 
@@ -185,8 +190,8 @@ $background: #2d2d2d;
 
 .circular-chart {
     padding-top: 6vh;
-    padding-bottom: 2vh;
-    max-height: 330px;
+    padding-bottom: 8vh;
+    max-height: 45vh;
   }
   
   .circle-bg {
@@ -197,9 +202,11 @@ $background: #2d2d2d;
   
   .circle {
     fill: none;
+    stroke: #900c3f;
     stroke-width: 1.9;
     stroke-linecap: round;
     animation: progress 2s ease-out forwards;
+
   }
   
   @keyframes progress {
@@ -207,11 +214,6 @@ $background: #2d2d2d;
       stroke-dasharray: 0 100;
     }
   }
-  
-  .circular-chart.orange .circle {
-    stroke: #900c3f;
-  }
-  
   
   .percentage {
     font-family: 'myFirstFont',Helvetica,'Helvetica Neue',Arial,sans-serif;

@@ -18,6 +18,12 @@ var Cards = [
     cssClass:"modesCard"
     },
 
+    {cardName:"Metre", 
+    cardDescription:"Your goal is to identify the type of blag that you hear.", 
+    cardImage:"https://image.flaticon.com/icons/svg/405/405338.svg",
+    cssClass:"metreCard"
+    },
+
     
 
 

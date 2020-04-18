@@ -50,8 +50,16 @@
     }
 
     #headerTitle{
-        font-size: 5vh;
+        font-size: 4vh;
         letter-spacing: -.5vw;
+    }
+
+    #logoutIcon{
+        height: 0.1vh;
+    }
+
+    #userNameHeader{
+        font-size: 0.1vh;
     }
 
 }

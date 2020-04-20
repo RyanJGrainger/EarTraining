@@ -3,9 +3,12 @@ import { Link } from "react-router-dom"
 
 function Intervals(){
     return (
-        <Link>
-            <h1 id="testingLink">intervals</h1>
-        </Link>
+        <div id="intervalRecognition">
+            <Link>
+                <h1 id="comingsoon">coming soon</h1>
+            </Link>
+        </div>
+        
     )
 }
 

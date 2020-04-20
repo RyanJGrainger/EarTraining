@@ -1,6 +1,6 @@
 .header {
     margin: 0;
-    height: 10vh;
+    height: 9vh;
     background: linear-gradient(0deg, rgba(254,255,255,1) 26%, rgba(203,203,203,1) 100%);
     display: flex;
 }
@@ -9,7 +9,7 @@
     position: absolute;
     padding-top: .2vh;
     margin-left: 30vw;
-    height: 10vh;
+    height: 9vh;
 }
 
 
@@ -29,21 +29,21 @@
 #logoutIcon{
     position: absolute;
     padding-top: 2vh;
-    margin-left: 85vw;
-    height: 7vh;
+    margin-left: 96vw;
+    height: 6vh;
 }
 
 #userNameHeader{
     position: absolute;
-    padding-top: 2vh;
+    padding-top: 1.5vh;
     margin-left: 89vw;
-    height: 7vh;
+    height: 6vh;
     font-family: 'myFirstFont',Helvetica,'Helvetica Neue',Arial,sans-serif;
 
 }
 
 
-@media (max-width: 1000px){
+@media (max-width: 800px){
 
     #homeIcon{
         margin-left: 3vw;

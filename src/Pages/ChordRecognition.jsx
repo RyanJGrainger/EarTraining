@@ -3,8 +3,8 @@ import Chords from "../Chords";
 import {Howl, Howler} from 'howler';
 import { useState } from 'react';
 
-var chordRecognitionLevel = 11;
-var CurrentChords = Chords.slice(0,chordRecognitionLevel + 1);
+var chordRecognitionLevel = 14;
+var CurrentChords = Chords.slice(0,chordRecognitionLevel);
 var numberOfChords = CurrentChords.length;
 var chordPlayedIndex = Math.floor(Math.random() * numberOfChords);
 var rootNote = Math.floor(Math.random() * 20) + 1;
@@ -81,7 +81,8 @@ function newRandomChord(){
 }
 
 function resetLevel(){
-   ////do this
+  // correctAnswers = [];
+
 }
 
 function playChord(){
@@ -108,21 +109,21 @@ function playChord(){
   });
     
     note1.play();
-  //   note2.play();
-  //   note3.play();
-  //   note4.play();
+    note2.play();
+    note3.play();
+    note4.play();
 
-    setTimeout(function() {
-      note2.play();
-    }, 200)
+    // setTimeout(function() {
+    //   note2.play();
+    // }, 200)
 
-    setTimeout(function() {
-      note3.play();
-    }, 400);
+    // setTimeout(function() {
+    //   note3.play();
+    // }, 400);
   
-    setTimeout(function() {
-      note4.play();
-    }, 600);
+    // setTimeout(function() {
+    //   note4.play();
+    // }, 600);
 
 }
 

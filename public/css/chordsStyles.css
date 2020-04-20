@@ -4,7 +4,7 @@ body {
 
 @media (max-width: 1000px) {
   #chordRecognition {
-    height: 90vh;
+    height: 91vh;
     margin: 0;
     background: -webkit-gradient(linear, left bottom, left top, from(#2d2d2d), color-stop(97%, #2d2d2d), to(black));
     background: linear-gradient(0deg, #2d2d2d 0%, #2d2d2d 97%, black 100%);
@@ -64,7 +64,7 @@ body {
             transition-timing-function: ease;
   }
   #chordRecognition {
-    height: 90vh;
+    height: 91vh;
     margin: 0;
     background: -webkit-gradient(linear, left bottom, left top, from(#2d2d2d), color-stop(97%, #2d2d2d), to(black));
     background: linear-gradient(0deg, #2d2d2d 0%, #2d2d2d 97%, black 100%);
@@ -78,13 +78,9 @@ body {
     display: block;
     margin: auto;
   }
-  .tempPlayButton:hover {
-    -webkit-filter: saturate(4) brightness(0.2);
-            filter: saturate(4) brightness(0.2);
-  }
   .answerContainer {
-    padding-left: 29vw;
-    padding-right: 29vw;
+    padding-left: 24vw;
+    padding-right: 24vw;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;

@@ -9,7 +9,7 @@ $background: #2d2d2d;
   }
 
 #homePage{
-    height: 90vh;
+    height: 91vh;
     width: 100vw;
     margin: 0;
     background: linear-gradient(0deg, rgba(45,45,45,1) 0%, rgba(45,45,45,1) 97%, rgba(0,0,0,1) 100%);
@@ -41,6 +41,7 @@ $background: #2d2d2d;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 0 10px rgb(0, 0, 0), 0 0 7px#000000 inset;
+    cursor: pointer;
 
 }
 
@@ -123,7 +124,7 @@ $background: #2d2d2d;
 }
 
 .container .card .contentBx h2 {
-    color: #fff;
+    color: #F0F0F0;
     opacity: 1;
     padding-top: 25px;
 }
@@ -178,14 +179,6 @@ $background: #2d2d2d;
 }
 
 
-// @media (max-width: 1000px){
-//     #cardsContainer{
-//         display: inline;    
-//     }
-// }
-
-
-
 ///////////////////////////////////////// progress circle
 
 .circular-chart {
@@ -221,3 +214,64 @@ $background: #2d2d2d;
     font-size: 0.4em;
     text-anchor: middle;
   }
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////
+////// PHONE 
+
+@media (max-width: 800px) {
+
+    .circular-chart {
+        padding-top: 6vh;
+        padding-bottom: 2vh;
+        max-height: 35vh;
+      }
+
+    #cardsContainer{
+        display: flex;    
+        flex-wrap: wrap;
+    }
+
+    .container .card {
+        width: 130px;
+        height: 100px;
+    }
+
+    #intervalsCard{
+        font-size: 20px;
+        letter-spacing: -1.2px;
+    }
+    
+    #chordsCard{
+        font-size: 22px;
+        letter-spacing: .1vw;
+    }
+    
+    #modesCard{
+        font-size: 22px;
+        letter-spacing: .1vw;
+    }
+    
+    #metreCard{
+        font-size: 22px;
+        letter-spacing: .1vw;
+    }
+
+    .container .card .imgBx img {
+        width: 65px;
+    }
+
+    .container .card .contentBx h2 {
+        padding-top: 50px;
+    }
+
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+

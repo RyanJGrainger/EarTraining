@@ -6,13 +6,11 @@ body{
 }
 
 
-
 @media (max-width: 1000px){
 
   #chordRecognition{
-    height: 90vh;
+    height: 91vh;
     margin: 0;
-    // background-color: $background;
     background: linear-gradient(0deg, rgba(45,45,45,1) 0%, rgba(45,45,45,1) 97%, rgba(0,0,0,1) 100%);
     display: grid;
     grid-template-rows: 2fr 4fr 2fr;
@@ -73,11 +71,11 @@ body{
   }
 
   #chordRecognition{
-    height: 90vh;
+    height: 91vh;
     margin: 0;
     background: linear-gradient(0deg, rgba(45,45,45,1) 0%, rgba(45,45,45,1) 97%, rgba(0,0,0,1) 100%);
+    // background: hsl(293, 100%, 73%);
     text-align: center;
-
   }
 
   .tempPlayButton {
@@ -90,18 +88,18 @@ body{
   }
 
   .tempPlayButton:hover{
-    filter: 
+    // filter: 
     // invert(0.5)
     // sepia(1)
     // hue-rotate(200deg)
-    saturate(4)
-    brightness(0.2);
+    // saturate(4)
+    // brightness(0.2);
   }
 
   .answerContainer {
     // opacity: .1;
-    padding-left: 29vw;
-    padding-right: 29vw;
+    padding-left: 24vw;
+    padding-right: 24vw;
     display: inline-flex;
     align-items: center;
     flex-wrap: wrap;

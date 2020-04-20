@@ -3,13 +3,16 @@ var Cards = [
     {cardName:"Intervals", 
     cardDescription:"Your goal is to identify the type of interval that you hear.", 
     cardImage:"./css/interval.svg",
-    cssClass:"intervalsCard"
+    cssClass:"intervalsCard",
+    link:"/interval-recognition"
     },
 
     {cardName:"Chords", 
      cardDescription:"Your goal is to identify the type of chord that you hear.", 
      cardImage:"./css/keyboard2.svg",
-     cssClass:"chordsCard"
+     cssClass:"chordsCard",
+     link:"/chord-recognition"
+
     },
 
     {cardName:"Modes", 
@@ -25,8 +28,6 @@ var Cards = [
     },
 
     
-
-
 ]
 
 export default Cards;

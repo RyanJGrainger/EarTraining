@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ProgressCircle(){
+function ProgressCircle(props){
 
     return ( 
         <div class="animated fadeIn">

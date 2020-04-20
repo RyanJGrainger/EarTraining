@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,IAAI,CAAA;EACF,MAAM,EAAE,CAAC;CAEV;;AAED,AAAA,oBAAoB,CAAA;EAChB,MAAM,EAAE,IAAI;EACZ,MAAM,EAAE,CAAC;EACT,UAAU,EAAE,0DAAoF;EAChG,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;CAEpB;;AAED,AAAA,WAAW,CAAA;EACT,KAAK,EAAE,KAAK;CACb",
+    "sources": [
+        "intervalsStyles.scss"
+    ],
+    "names": [],
+    "file": "intervalsStyles.css"
+}

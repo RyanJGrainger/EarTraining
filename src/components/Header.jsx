@@ -12,11 +12,12 @@ function Header(props){
             </Link>
 
 
-            <h1 id="headerTitle">eartrain.me</h1>    
-
+            <h1 id="headerTitle">eartrain.me</h1> 
+            
+            <p id="userNameHeader">ryang199</p>
+   
             <img id="logoutIcon" src="../css/logout.svg"/>
 
-            <p id="userNameHeader">ryang199</p>
 
         </div>
 

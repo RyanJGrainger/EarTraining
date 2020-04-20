@@ -5,7 +5,7 @@
 }
 
 #homePage {
-  height: 90vh;
+  height: 91vh;
   width: 100vw;
   margin: 0;
   background: -webkit-gradient(linear, left bottom, left top, from(#2d2d2d), color-stop(97%, #2d2d2d), to(black));
@@ -36,6 +36,7 @@
   overflow: hidden;
   -webkit-box-shadow: 0 0 10px black, 0 0 7px #000000 inset;
           box-shadow: 0 0 10px black, 0 0 7px #000000 inset;
+  cursor: pointer;
 }
 
 .container .card:hover {
@@ -121,7 +122,7 @@
 }
 
 .container .card .contentBx h2 {
-  color: #fff;
+  color: #F0F0F0;
   opacity: 1;
   padding-top: 25px;
 }
@@ -214,5 +215,46 @@
   fill: white;
   font-size: 0.4em;
   text-anchor: middle;
+}
+
+@media (max-width: 800px) {
+  .circular-chart {
+    padding-top: 6vh;
+    padding-bottom: 2vh;
+    max-height: 35vh;
+  }
+  #cardsContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .container .card {
+    width: 130px;
+    height: 100px;
+  }
+  #intervalsCard {
+    font-size: 20px;
+    letter-spacing: -1.2px;
+  }
+  #chordsCard {
+    font-size: 22px;
+    letter-spacing: .1vw;
+  }
+  #modesCard {
+    font-size: 22px;
+    letter-spacing: .1vw;
+  }
+  #metreCard {
+    font-size: 22px;
+    letter-spacing: .1vw;
+  }
+  .container .card .imgBx img {
+    width: 65px;
+  }
+  .container .card .contentBx h2 {
+    padding-top: 50px;
+  }
 }
 /*# sourceMappingURL=homepageStyles.css.map */

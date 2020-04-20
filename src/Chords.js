@@ -11,6 +11,9 @@ var Chords = [
     {chordName:"Aug",chordID:"Augmented Button",intervals:[4, 8]},
     {chordName:"Maj 6",chordID:"Major6Button",intervals:[4, 7, 9]},
     {chordName:"Min 6",chordID:"Minor6Button",intervals:[3, 7, 9]},
+    {chordName:"Dim 7",chordID:"Diminished7Button",intervals:[3, 6, 9]},
+    {chordName:"Aug 7",chordID:"Augmented7Button",intervals:[4, 8, 10]}
+
 ];
 
 

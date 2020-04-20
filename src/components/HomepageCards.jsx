@@ -1,6 +1,8 @@
 import React from "react";
 import Cards from "../Cards"
 import {Link} from 'react-router-dom';
+import DelayLink from 'react-delay-link';
+import { useState } from 'react';
 
 
 var Card = props => {
@@ -8,9 +10,9 @@ var Card = props => {
             <div className="card" >
 
                 <div className="imgBx">
-                    <Link to="/chord-recognition">
+                    <DelayLink delay={500} to={props.link}>
                         <img src={props.cardImage} alt="img"/>
-                    </Link>
+                    </DelayLink>
                 </div>
 
                 <div className="contentBx" >
@@ -18,9 +20,7 @@ var Card = props => {
                     <h2 id={props.cssClass}>{props.cardName}</h2>
 
                     <div className="links">
-                        <Link to="/chord-recognition">
                             <p id="levelUpLink">Lvl UP</p>
-                        </Link>
                             <p id="practiceLink">listen</p>
                     </div>
                     
@@ -30,8 +30,15 @@ var Card = props => {
 }
 
 
+function HomepageCards(){
 
-var HomepageCards = () =>  <div className="animated bounceInUp" id="cardsContainer">{Cards.map(Card)} </div>
+    const [cardState, setCardState] = useState("animated bounceInUp")
+
+    return(
+        <div className={cardState} onClick={() => setCardState("animated bounceOutDown")} id="cardsContainer">{Cards.map(Card)} </div>
+    )
+
+}  
     
 
 export default HomepageCards;

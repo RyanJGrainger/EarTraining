@@ -3,11 +3,14 @@ import Chords from "../Chords";
 import {Howl, Howler} from 'howler';
 import { useState } from 'react';
 
-var chordRecognitionLevel = 14;
+var chordRecognitionLevel = 18;
 var CurrentChords = Chords.slice(0,chordRecognitionLevel);
 var numberOfChords = CurrentChords.length;
 var chordPlayedIndex = Math.floor(Math.random() * numberOfChords);
-var rootNote = Math.floor(Math.random() * 20) + 1;
+var totalNotes = 31;
+var soundLibary = "pianoNotes"
+var range = totalNotes - (CurrentChords[chordPlayedIndex].intervals[CurrentChords[chordPlayedIndex].intervals.length - 1]); //destructuring?? 
+var rootNote = Math.floor(Math.random() * range) + 1; 
 var correctAnswers = [];
 
 
@@ -22,6 +25,7 @@ function ChordRecognition (){
                         key={CurrentChords.chordID}
                         chordName={CurrentChords.chordName}
                         chordID={CurrentChords.chordID}
+                        intervals={CurrentChords.intervals}
                     />
                   )
                 )}
@@ -42,9 +46,9 @@ function Button(props) {
     return(
         <p onClick={() => {
             if (isCorrectAnswer(props.chordID) === true){
-                setButtonState(" answerCircle animated flipOutY");
+                setButtonState(" answerCircleCorrect animated flipOutY");
                 };
-            }
+            }//// else, reset level here?
         } 
         className={buttonState}> {props.chordName} </p>
     )
@@ -55,6 +59,8 @@ function isCorrectAnswer(buttonClicked){
         correctAnswers.push(chordPlayedIndex);
         if (correctAnswers.length === numberOfChords){
           alert("level complete")
+            correctAnswers = [];
+
         }
         else {
           var correctSoundFx = new Howl({
@@ -62,10 +68,14 @@ function isCorrectAnswer(buttonClicked){
             volume: 0.3
         });
         correctSoundFx.play();
+
           do {
-            newRandomChord()
+            chordPlayedIndex = Math.floor(Math.random() * numberOfChords);
           } while (correctAnswers.includes(chordPlayedIndex));
-          rootNote = Math.floor(Math.random() * 20) + 1;
+
+          range = totalNotes - (CurrentChords[chordPlayedIndex].intervals[CurrentChords[chordPlayedIndex].intervals.length - 1]);
+          rootNote = Math.floor(Math.random() * range) + 1;
+
           return true;
         }  
     }
@@ -76,9 +86,6 @@ function isCorrectAnswer(buttonClicked){
 }
 
 
-function newRandomChord(){
-  chordPlayedIndex = Math.floor(Math.random() * numberOfChords);
-}
 
 function resetLevel(){
   // correctAnswers = [];
@@ -87,24 +94,30 @@ function resetLevel(){
 
 function playChord(){
 
+
   var note1 = new Howl({
-      src: ["../sounds/pianoNotes/note" + rootNote + ".wav"],
+      src: ["../sounds/" + soundLibary + "/note" + rootNote + ".wav"],
       html5: true,
       volume: 0.25
     });
 
   var note2 = new Howl({
-      src: ["../sounds/pianoNotes/note" + (rootNote + CurrentChords[chordPlayedIndex].intervals[0]) + ".wav"],
+      src: ["../sounds/" + soundLibary + "/note" + (rootNote + CurrentChords[chordPlayedIndex].intervals[0]) + ".wav"],
       volume: 0.25
   });
 
   var note3 = new Howl({
-      src: ["../sounds/pianoNotes/note" + (rootNote + CurrentChords[chordPlayedIndex].intervals[1]) + ".wav"],
+      src: ["../sounds/" + soundLibary + "/note" + (rootNote + CurrentChords[chordPlayedIndex].intervals[1]) + ".wav"],
       volume: 0.25
   });
 
   var note4 = new Howl({
-      src: ["../sounds/pianoNotes/note" + (rootNote + CurrentChords[chordPlayedIndex].intervals[2]) + ".wav"],
+      src: ["../sounds/" + soundLibary + "/note" + (rootNote + CurrentChords[chordPlayedIndex].intervals[2]) + ".wav"],
+      volume: 0.25
+  });
+
+    var note5 = new Howl({
+      src: ["../sounds/" + soundLibary + "/note" + (rootNote + CurrentChords[chordPlayedIndex].intervals[3]) + ".wav"],
       volume: 0.25
   });
     
@@ -112,6 +125,8 @@ function playChord(){
     note2.play();
     note3.play();
     note4.play();
+    note5.play();
+
 
     // setTimeout(function() {
     //   note2.play();

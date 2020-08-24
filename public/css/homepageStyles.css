@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,600,700,800, 800i, 900&display=swap");
+body {
+  background: #2d2d2d;
+}
+
 @font-face {
   font-family: "myFirstFont";
   src: url("BIG JOHN.otf");
@@ -8,8 +12,6 @@
   height: 91vh;
   width: 100vw;
   margin: 0;
-  background: -webkit-gradient(linear, left bottom, left top, from(#2d2d2d), color-stop(97%, #2d2d2d), to(black));
-  background: linear-gradient(0deg, #2d2d2d 0%, #2d2d2d 97%, black 100%);
   font-family: 'myFirstFont',Helvetica,'Helvetica Neue',Arial,sans-serif;
 }
 

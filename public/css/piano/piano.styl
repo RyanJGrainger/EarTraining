@@ -1,0 +1,81 @@
+$total-width = 500px
+$total-height = 100px
+$outer-border-width = 5px
+$note-border-width = 7px
+$white-width = $total-width / 14
+$black-width = $white-width * 0.4
+$black-height = $total-height * 0.58
+$bg-color = #FFF
+$white-color = #ffa41b
+$black-color = #ffa41b
+$border-color = #FFF
+$highlighted-white-color = #8A6127
+$highlighted-black-color = #8A6127
+
+.piano-roll
+  width $total-width
+  position relative
+  background $bg-color
+  padding $outer-border-width
+  border-radius 3px
+
+.note
+  border-radius 3px // makes it roundddddd
+  transition all 0.05s ease-out
+
+.white-notes
+.black-notes
+  display flex
+ 
+.white-notes
+  width $total-width
+  .note
+    width $white-width
+    height $total-height
+    margin ( $note-border-width / 2 )
+    background $white-color
+    &.highlighted-note
+      background $highlighted-white-color
+  
+$black-gap = $white-width - $black-width - $note-border-width * 2
+
+.black-notes
+  position absolute
+  top $outer-border-width + ( $note-border-width / 2 )
+  left $outer-border-width + $white-width - ( $note-border-width / 2 ) - ( $black-width / 2 ) - ( $note-border-width / 2 )
+  
+  .note
+    width $black-width
+    height $black-height
+    position absolute
+    background $black-color
+    border $note-border-width solid $border-color
+    border-top none
+    border-top-left-radius 0
+    border-top-right-radius 0
+    
+    &:first-child
+      left 0
+    &:nth-child(2)
+      left $white-width
+    &:nth-child(3)
+      left ( $white-width * 2 ) 
+    &:nth-child(4)
+      left ( $white-width * 4 )
+    &:nth-child(5)
+      left ( $white-width * 5 )
+    &:nth-child(6)
+      left ( $white-width * 7 )
+    &:nth-child(7)
+      left ( $white-width * 8 )   
+    &:nth-child(8)
+      left ( $white-width * 9 )  
+    &:nth-child(9)
+      left ( $white-width * 11 )  
+    &:nth-child(10)
+      left ( $white-width * 12 ) 
+      
+    &.highlighted-note
+        background $highlighted-black-color
+        border-color $border-color
+  

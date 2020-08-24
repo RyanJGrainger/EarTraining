@@ -1,5 +1,6 @@
 import React from "react";
 import ChordRecognition from "./Pages/ChordRecognition"
+import ChordListen from "./Pages/ChordListen";
 import IntervalRecognition from "./Pages/IntervalRecognition"
 import Homepage from "./Pages/Homepage";
 import Header from "./components/Header"
@@ -15,8 +16,9 @@ function App(props){
             <Header/>
             <Switch>
                 <Route path="/" exact component={Homepage} />
-                <Route path="/chord-recognition" component={ChordRecognition} />
                 <Route path="/interval-recognition" component={IntervalRecognition} />
+                <Route path="/chord-recognition" component={ChordRecognition} />
+                <Route path="/chord-listen" component={ChordListen} />
             </Switch>
             </div>
         </Router>    

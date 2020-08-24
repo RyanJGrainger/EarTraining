@@ -1,0 +1,76 @@
+.piano-roll {
+  width: 500px;
+  position: relative;
+  background: #fff;
+  padding: 5px;
+  border-radius: 3px;
+}
+.note {
+  border-radius: 3px;
+  transition: all 0.05s ease-out;
+}
+.white-notes,
+.black-notes {
+  display: flex;
+}
+.white-notes {
+  width: 500px;
+}
+.white-notes .note {
+  width: 35.714285714285715px;
+  height: 100px;
+  margin: 3.5px;
+  background: #ffa41b;
+}
+.white-notes .note.highlighted-note {
+  background: #8a6127;
+}
+.black-notes {
+  position: absolute;
+  top: 8.5px;
+  left: 26.571428571428573px;
+}
+.black-notes .note {
+  width: 14.285714285714286px;
+  height: 57.99999999999999px;
+  position: absolute;
+  background: #ffa41b;
+  border: 7px solid #fff;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.black-notes .note:first-child {
+  left: 0;
+}
+.black-notes .note:nth-child(2) {
+  left: 35.714285714285715px;
+}
+.black-notes .note:nth-child(3) {
+  left: 71.42857142857143px;
+}
+.black-notes .note:nth-child(4) {
+  left: 142.85714285714286px;
+}
+.black-notes .note:nth-child(5) {
+  left: 178.57142857142858px;
+}
+.black-notes .note:nth-child(6) {
+  left: 250px;
+}
+.black-notes .note:nth-child(7) {
+  left: 285.7142857142857px;
+}
+.black-notes .note:nth-child(8) {
+  left: 321.42857142857144px;
+}
+.black-notes .note:nth-child(9) {
+  left: 392.8571428571429px;
+}
+.black-notes .note:nth-child(10) {
+  left: 428.57142857142856px;
+}
+.black-notes .note.highlighted-note {
+  background: #8a6127;
+  border-color: #fff;
+}

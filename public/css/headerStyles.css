@@ -1,15 +1,18 @@
 .header {
     margin: 0;
     height: 9vh;
-    background: linear-gradient(0deg, rgba(254,255,255,1) 26%, rgba(203,203,203,1) 100%);
+    /* background: linear-gradient(0deg, rgba(254,255,255,1) 26%, rgba(203,203,203,1) 100%); */
+    background: #dbdbdb;
+    background: #2d2d2d;
+
     display: flex;
 }
 
 #homeIcon {
     position: absolute;
-    padding-top: .2vh;
-    margin-left: 30vw;
-    height: 9vh;
+    padding-top: 2.2vh;
+    margin-left: 4.5vw;
+    height: 7.2vh;
 }
 
 
@@ -19,8 +22,9 @@
     font-family: 'Comfortaa', cursive;
     font-size: 5vh;
     color: #2d2d2d;
+    color: #dbdbdb;
     padding-top: 1vh;
-    letter-spacing: -.1vw;
+    letter-spacing: -.05vw;
     /* letter-spacing: 0vw; */
 
     cursor: default;
@@ -34,6 +38,8 @@
 }
 
 #userNameHeader{
+    color: #dbdbdb;
+
     position: absolute;
     padding-top: 1.5vh;
     margin-left: 89vw;

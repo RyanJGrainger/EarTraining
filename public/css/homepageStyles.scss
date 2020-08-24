@@ -2,6 +2,10 @@
 
 $background: #2d2d2d;
 
+body{
+    background: $background;
+
+}
 
 @font-face {
     font-family: "myFirstFont";
@@ -12,7 +16,7 @@ $background: #2d2d2d;
     height: 91vh;
     width: 100vw;
     margin: 0;
-    background: linear-gradient(0deg, rgba(45,45,45,1) 0%, rgba(45,45,45,1) 97%, rgba(0,0,0,1) 100%);
+    // background: linear-gradient(0deg, rgba(45,45,45,1) 0%, rgba(45,45,45,1) 97%, rgba(0,0,0,1) 100%);
     font-family: 'myFirstFont',Helvetica,'Helvetica Neue',Arial,sans-serif;
     // display: flex;
     // justify-content: space-evenly;

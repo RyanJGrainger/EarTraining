@@ -15,10 +15,10 @@ function App(props){
             <div>
             <Header/>
             <Switch>
-                <Route path="/" exact component={Homepage} />
+                <Route path="/" component={ChordListen} />
+                <Route path="/homepage" exact component={Homepage} />
                 <Route path="/interval-recognition" component={IntervalRecognition} />
                 <Route path="/chord-recognition" component={ChordRecognition} />
-                <Route path="/chord-listen" component={ChordListen} />
             </Switch>
             </div>
         </Router>    

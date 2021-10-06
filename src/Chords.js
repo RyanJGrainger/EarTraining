@@ -17,12 +17,12 @@ var Chords = [
     {chordName:"Aug", chordFlavour: "7", chordID:"Augmented7Button",intervals:[1, 5, 9, 11]},
     {chordName:"6/9", chordFlavour: "", chordID:"6/9Button",intervals:[1, 5, 8, 10, 15]},
     {chordName:"Maj", chordFlavour: "#11", chordID:"Major#11Button",intervals:[1, 5, 8, 19]},
-    {chordName:"?",chordID:"Major9Button",intervals:[1, 5, 8, 12, 15]},
-    {chordName:"?",chordID:"Minor9Button",intervals:[1, 4, 8, 11, 15]},
-    {chordName:"?",chordID:"Diminished7Button",intervals:[1, 4, 7, 10]},
-    {chordName:"?",chordID:"Augmented7Button",intervals:[1, 5, 9, 11]},
-    {chordName:"?",chordID:"6/9Button",intervals:[1, 5, 8, 10, 15]},
-    {chordName:"?",chordID:"Major#11Button",intervals:[1, 5, 8, 19]},
+    // {chordName:"?",chordID:"Major9Button",intervals:[1, 5, 8, 12, 15]},
+    // {chordName:"?",chordID:"Minor9Button",intervals:[1, 4, 8, 11, 15]},
+    // {chordName:"?",chordID:"Diminished7Button",intervals:[1, 4, 7, 10]},
+    // {chordName:"?",chordID:"Augmented7Button",intervals:[1, 5, 9, 11]},
+    // {chordName:"?",chordID:"6/9Button",intervals:[1, 5, 8, 10, 15]},
+    // {chordName:"?",chordID:"Major#11Button",intervals:[1, 5, 8, 19]},
 
 ];
 

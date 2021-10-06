@@ -103,6 +103,18 @@ function playChord(intervals, setState){
     var randomKey = Math.floor(Math.random() * range); 
     finalIntervals = [];
 
+    ////////// new shit 2021 lol
+
+
+        // noteArray.forEach((note, i) => {
+        //     setTimeout(() => {
+        //         note.stop()
+        //       }, i * 1);
+        // });
+
+
+    //////////////
+
     for (var i = 0; i < intervals.length; i++){
         finalIntervals.push(intervals[i] + randomKey)
     } 

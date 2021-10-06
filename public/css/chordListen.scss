@@ -6,12 +6,14 @@
 
 
   #chordsListen{
-    height: 91vh;
+    height: 70vh;
     margin: auto;
-    width: 1300px;
+    width: 60vw;
+    margin-top: 8vh;
     // background: linear-gradient(0deg, rgba(45,45,45,1) 0%, rgba(45,45,45,1) 97%, rgba(0,0,0,1) 100%);
     background-color: #ffa41b;
     text-align: center;
+    border-radius: 25px;
 
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -32,7 +34,7 @@
     display: block;
     font-family: 'myFirstFont',Helvetica,'Helvetica Neue',Arial,sans-serif;
     color: #FFF;
-    padding-left: 70px;
+    padding-left: 40px;
   }
 
   #inversionText{
@@ -58,7 +60,7 @@
 
 
 #pianoContainer{
-  width: 62%;
+  width: 66%;
   margin: auto;
 }
 
@@ -68,8 +70,8 @@
 
 
   .listenButtonContainer {
-    padding-top: 26px;
-    width: 1140px;
+    padding-top: 0px;
+    width: 50vw;
     display: inline-flex;
     align-items: center;
     flex-wrap: wrap;
@@ -80,9 +82,9 @@
     border-radius: 50%;
     color: #FFF;
     cursor: pointer;
-    width: 16vh;
-    line-height: 14vh;
-    font-size: 4vh;
+    width: 14vh;
+    line-height: 12vh;
+    font-size: 3.5vh;
     margin: 7px;
     border: 7px solid #FFF;
     overflow: hidden;

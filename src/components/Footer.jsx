@@ -10,7 +10,7 @@ function Footer(props){
             <h1 id="copyright">ⓒ 2021 Ryan J Grainger‎.....</h1> 
 
             <a href="https://github.com/RyanJGrainger" target="_blank">  
-            <img src="./css/githubicon.png" width="40"  height="40" ></img>
+            <img src="./css/githubicon.png" width="35"  height="35" ></img>
             </a>
 
 

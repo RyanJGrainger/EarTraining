@@ -3,7 +3,7 @@
     height: 8vh;
     /* background: linear-gradient(0deg, rgba(254,255,255,1) 26%, rgba(203,203,203,1) 100%); */
     background: #dbdbdb;
-    background: #0f0f0f;
+    background: #1b1b1b;
 
     display: flex;
     align-items: center;
@@ -21,7 +21,7 @@
 #headerTitle {
     /* font-family: 'myFirstFont',Helvetica,'Helvetica Neue',Arial,sans-serif; */
     font-family: 'Comfortaa', cursive;
-    font-size: 3.5vh;
+    font-size: 3.2vh;
     color: #2d2d2d;
     color: #dbdbdb;
     padding-top: 1vh;

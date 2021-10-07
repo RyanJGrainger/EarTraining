@@ -11,7 +11,7 @@ function Header(props){
                 <img id="homeIcon" src="../css/home-run.svg" alt="homeicon"/>
             </Link> */}
 
-            <img src="./css/logo.png"  width="70"   height="70" ></img>
+            <img src="./css/logo.png"  width="60"   height="60vh" ></img>
 
             <h1 id="headerTitle">eartrain.me</h1> 
 

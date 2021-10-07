@@ -8,10 +8,10 @@
 }
 
 #chordsListen {
-  height: 70vh;
+  height: 525px;
+  width: 850px;
   margin: auto;
-  width: 60vw;
-  margin-top: 8vh;
+  margin-top: 10vh;
   background-color: #ffa41b;
   text-align: center;
   border-radius: 25px;
@@ -46,7 +46,7 @@
 
 #inversionButtonContainer {
   margin: 0;
-  font-size: 60px;
+  font-size: 55px;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -66,7 +66,7 @@
 
 .listenButtonContainer {
   padding-top: 0px;
-  width: 50vw;
+  width: 800px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -84,9 +84,9 @@
   border-radius: 50%;
   color: #FFF;
   cursor: pointer;
-  width: 14vh;
-  line-height: 12vh;
-  font-size: 3.5vh;
+  width: 90px;
+  line-height: 80px;
+  font-size: 22px;
   margin: 7px;
   border: 7px solid #FFF;
   overflow: hidden;

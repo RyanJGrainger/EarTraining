@@ -7,9 +7,10 @@
     /* padding-top: 25vh; */
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     position: fixed;
     bottom: 10px;
-    right: 45vw; 
+    right: 10px; 
 }
+
 

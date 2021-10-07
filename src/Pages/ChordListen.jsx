@@ -1,12 +1,14 @@
 import React from "react";
 import { useState } from 'react';
 import Chords from "../Chords";
-import {Howl, Howler} from 'howler';
+import {Howl} from 'howler';
 
 var soundLibary = "cleanKeys"
 var totalNotes = 24;
 var selectedInversion = 0
 var finalIntervals = [];
+
+var preLoadedSounds = []
 
 
 function ChordListen(){

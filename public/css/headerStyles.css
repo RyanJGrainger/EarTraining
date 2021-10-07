@@ -3,7 +3,7 @@
     height: 8vh;
     /* background: linear-gradient(0deg, rgba(254,255,255,1) 26%, rgba(203,203,203,1) 100%); */
     background: #dbdbdb;
-    background: #ff0000;
+    background: #1d1d1d;
 
     display: flex;
     align-items: center;
@@ -70,3 +70,5 @@
     }
 
 }
+
+

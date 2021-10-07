@@ -1,11 +1,13 @@
 .header {
     margin: 0;
-    height: 9vh;
+    height: 8vh;
     /* background: linear-gradient(0deg, rgba(254,255,255,1) 26%, rgba(203,203,203,1) 100%); */
     background: #dbdbdb;
-    background: #2d2d2d;
+    background: #0f0f0f;
 
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #homeIcon {
@@ -17,10 +19,9 @@
 
 
 #headerTitle {
-    margin: auto;
     /* font-family: 'myFirstFont',Helvetica,'Helvetica Neue',Arial,sans-serif; */
     font-family: 'Comfortaa', cursive;
-    font-size: 5vh;
+    font-size: 3.5vh;
     color: #2d2d2d;
     color: #dbdbdb;
     padding-top: 1vh;

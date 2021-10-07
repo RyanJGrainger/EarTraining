@@ -1,0 +1,12 @@
+.footer {
+    font-family: 'Comfortaa', cursive;
+    font-size: .8vh;
+    color: #2d2d2d;
+    color: #dbdbdb;
+    letter-spacing: -.05vw;
+    padding-top: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

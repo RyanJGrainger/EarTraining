@@ -14,7 +14,7 @@ function ChordListen(){
     const [pianoNotesPressed, setPianoNotesPressed] = useState([0]) // redo using context
 
     return(
-        <div className="animated slideInUp" id="chordsListen">
+        <div className="animated fadeIn" id="chordsListen">
 
             <div id="chordListenControls">
                 <InversionControls/>
@@ -36,6 +36,7 @@ function ChordListen(){
                 )}
               </div>
         </div>
+        
     )
 }
 
@@ -103,7 +104,7 @@ function playChord(intervals, setState){
     var randomKey = Math.floor(Math.random() * range); 
     finalIntervals = [];
 
-    ////////// new shit 2021 lol
+    ////////// new  2021 lol
 
 
         // noteArray.forEach((note, i) => {

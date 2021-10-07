@@ -5,6 +5,7 @@ import IntervalRecognition from "./Pages/IntervalRecognition"
 import Homepage from "./Pages/Homepage";
 import Header from "./components/Header"
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import Footer from "./components/Footer";
 
 
 
@@ -20,6 +21,7 @@ function App(props){
                 <Route path="/interval-recognition" component={IntervalRecognition} />
                 <Route path="/chord-recognition" component={ChordRecognition} />
             </Switch>
+            <Footer/>
             </div>
         </Router>    
     );

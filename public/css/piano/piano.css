@@ -24,6 +24,7 @@
 }
 .white-notes .note.highlighted-note {
   background: #8a6127;
+  /* background: #FF69B4; */
 }
 .black-notes {
   position: absolute;
@@ -71,6 +72,8 @@
   left: 428.57142857142856px;
 }
 .black-notes .note.highlighted-note {
+  /* background: #FF69B4; */
   background: #8a6127;
+
   border-color: #fff;
 }

@@ -8,7 +8,10 @@ var totalNotes = 24;
 var selectedInversion = 0
 var finalIntervals = [];
 
-var preLoadedSounds = []
+// var preload = new Howl({
+//     src: ["../sounds/" + soundLibary + "/note" + (finalIntervals[i]) + ".wav"],
+//     volume : 0
+// })
 
 
 function ChordListen(){
@@ -46,6 +49,8 @@ export default ChordListen;
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 
 function InversionControls(){
     const [inversionClicked, setClicked] = useState(0)
@@ -102,6 +107,21 @@ function createChordInversion(intervals, a, setState){
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
 function playChord(intervals, setState){
+
+    var loadArray = [] ////preloads and plays all note to resolve initial play lag
+    for (var i = 0; i < 23; i++){
+        var note = new Howl({
+            src: ["../sounds/" + soundLibary + "/note" + (i + 1) + ".wav"],
+            volume : 0
+        })
+        loadArray.push(note)
+    }
+    loadArray.forEach((note) => {
+
+            note.play()
+    });
+
+
     var range = totalNotes - (intervals[intervals.length - 1] - 1);  // double check this
     var randomKey = Math.floor(Math.random() * range); 
     finalIntervals = [];

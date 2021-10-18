@@ -1,7 +1,8 @@
 import React from "react";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Chords from "../Chords";
 import {Howl} from 'howler';
+import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 
 var soundLibary = "cleanKeys"
 var totalNotes = 24;
@@ -16,31 +17,58 @@ var finalIntervals = [];
 
 function ChordListen(){
 
+    const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+        setLoading(true)
+        setTimeout(() =>{
+            setLoading(false)
+        },1800)
+
+    }, [])
+
     const [pianoNotesPressed, setPianoNotesPressed] = useState([0]) // redo using context
 
     return(
-        <div className="animated fadeIn" id="chordsListen">
 
-            <div id="chordListenControls">
-                <InversionControls/>
-                <Piano notesPressed={pianoNotesPressed} />
+        <div>
+            {
+                loading ?
+
+                <div className="animated fadeIn" id="chordsListen">
+                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                    <ClimbingBoxLoader color={"#2d2d2d"} loading={loading} size={25} />
+
+                </div>
+
+                :
+            
+
+            <div className="animated fadeIn" id="chordsListen">
+
+                <div id="chordListenControls">
+                    <InversionControls/>
+                    <Piano notesPressed={pianoNotesPressed} />
+                </div>
+
+                <div className="listenButtonContainer">
+                {Chords.map( Chords => 
+                    (
+                        <ChordButton
+                            key={Chords.chordID}
+                            chordName={Chords.chordName}
+                            chordFlavour={Chords.chordFlavour}
+                            chordID={Chords.chordID}
+                            intervals={Chords.intervals}
+                            setState={setPianoNotesPressed}
+                        />
+                    )
+                    )}
+                </div>
             </div>
-
-            <div className="listenButtonContainer">
-              {Chords.map( Chords => 
-                  (
-                    <ChordButton
-                        key={Chords.chordID}
-                        chordName={Chords.chordName}
-                        chordFlavour={Chords.chordFlavour}
-                        chordID={Chords.chordID}
-                        intervals={Chords.intervals}
-                        setState={setPianoNotesPressed}
-                    />
-                  )
-                )}
-              </div>
+            }
         </div>
+        
         
     )
 }
@@ -63,7 +91,7 @@ function InversionControls(){
     }
 
     return(
-        <div id="listenInversions">
+        <div className="animated fadeIn" id="listenInversions">
             <h1 id="inversionText">Inversion</h1>
             <div id="inversionButtonContainer">
                 <p onClick={() => switchInversion(0)} style= {inversionClicked === 0 ? buttonDark : buttonLight} class="inversionButton">R</p>
@@ -116,10 +144,6 @@ function playChord(intervals, setState){
         })
         loadArray.push(note)
     }
-    // loadArray.forEach((note) => {
-
-    //         note.play()
-    // });
 
 
     var range = totalNotes - (intervals[intervals.length - 1] - 1);  // double check this
@@ -169,7 +193,7 @@ function Piano(props){
     var keyDark = "note highlighted-note"
 
     return(
-    <div id="pianoContainer">
+    <div className="animated flipInX"  id="pianoContainer">
         <div id="piano-roll" class="piano-roll">
             <div class="white-notes">
                 <div id="1" class={props.notesPressed.includes(1) ? keyDark : keyLight}></div>

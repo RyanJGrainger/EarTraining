@@ -7,6 +7,12 @@
           transition-timing-function: ease;
 }
 
+#loader {
+  height: 525px;
+  width: 851px;
+  margin: auto;
+}
+
 #chordsListen {
   height: 525px;
   width: 851px;

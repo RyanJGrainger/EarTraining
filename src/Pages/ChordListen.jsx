@@ -20,6 +20,14 @@ function ChordListen(){
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
+        var loadArray = [] ////preloads and plays all notes to resolve initial play lag
+        for (var i = 0; i < 23; i++){
+            var note = new Howl({
+                src: ["../sounds/" + soundLibary + "/note" + (i + 1) + ".wav"],
+                volume : 0
+            })
+            loadArray.push(note)
+        }
         setLoading(true)
         setTimeout(() =>{
             setLoading(false)
@@ -135,15 +143,6 @@ function createChordInversion(intervals, a, setState){
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
 function playChord(intervals, setState){
-
-    var loadArray = [] ////preloads and plays all note to resolve initial play lag
-    for (var i = 0; i < 23; i++){
-        var note = new Howl({
-            src: ["../sounds/" + soundLibary + "/note" + (i + 1) + ".wav"],
-            volume : 0
-        })
-        loadArray.push(note)
-    }
 
 
     var range = totalNotes - (intervals[intervals.length - 1] - 1);  // double check this

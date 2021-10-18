@@ -11,15 +11,13 @@ function Header(props){
                 <img id="homeIcon" src="../css/home-run.svg" alt="homeicon"/>
             </Link> */}
 
-            <img src="./css/logo.png"  width="55"   height="55" ></img>
+            <img className="animated fadeInDown" src="./css/logo.png"  width="55"   height="55" ></img>
 
-            <h1 id="headerTitle">eartrain.me</h1> 
+            <h1 className="animated fadeInDown" id="headerTitle">eartrain.me</h1> 
 
             
             
-            {/* <p id="userNameHeader">ryang199</p>
-   
-            <img id="logoutIcon" src="../css/logout.svg"/> */}
+       
 
 
         </div>

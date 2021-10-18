@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from 'react';
 import Chords from "../Chords";
 import {Howl} from 'howler';
-import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
+import ScaleLoader from "react-spinners/ScaleLoader";
 
 var soundLibary = "cleanKeys"
 var totalNotes = 24;
@@ -18,14 +18,13 @@ function ChordListen(){
          new Howl({
             src: ["../sounds/" + soundLibary + "/note" + (i + 1) + ".wav"],
             volume : 0
-        })
+        }) 
     }
-
     useEffect(() => {
         setLoading(true)
         setTimeout(() =>{
             setLoading(false)
-        },1800)
+        },3800)
 
     }, [])
 
@@ -37,9 +36,9 @@ function ChordListen(){
             {
                 loading ?
 
-                <div className="animated fadeIn" id="chordsListen">
-                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-                    <ClimbingBoxLoader color={"#2d2d2d"} loading={loading} size={20} />
+                <div className="animated fadeIn delay-1s" id="chordsListen">
+                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                    <ScaleLoader color={"#2d2d2d"} loading={loading} size={20} />
 
                 </div>
 

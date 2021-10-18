@@ -9,25 +9,19 @@ var totalNotes = 24;
 var selectedInversion = 0
 var finalIntervals = [];
 
-// var preload = new Howl({
-//     src: ["../sounds/" + soundLibary + "/note" + (finalIntervals[i]) + ".wav"],
-//     volume : 0
-// })
-
 
 function ChordListen(){
 
     const [loading, setLoading] = useState(false);
 
+    for (var i = 0; i < 23; i++){      ////preloads and plays all notes to resolve initial play lag
+         new Howl({
+            src: ["../sounds/" + soundLibary + "/note" + (i + 1) + ".wav"],
+            volume : 0
+        })
+    }
+
     useEffect(() => {
-        var loadArray = [] ////preloads and plays all notes to resolve initial play lag
-        for (var i = 0; i < 23; i++){
-            var note = new Howl({
-                src: ["../sounds/" + soundLibary + "/note" + (i + 1) + ".wav"],
-                volume : 0
-            })
-            loadArray.push(note)
-        }
         setLoading(true)
         setTimeout(() =>{
             setLoading(false)
@@ -45,7 +39,7 @@ function ChordListen(){
 
                 <div className="animated fadeIn" id="chordsListen">
                     <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-                    <ClimbingBoxLoader color={"#2d2d2d"} loading={loading} size={25} />
+                    <ClimbingBoxLoader color={"#2d2d2d"} loading={loading} size={20} />
 
                 </div>
 
@@ -111,7 +105,7 @@ function InversionControls(){
     ) 
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 function ChordButton(props) {
     const [buttonState, setButtonState] = useState("listenCircle animated flipInX")
@@ -128,7 +122,7 @@ function ChordButton(props) {
     )
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 function createChordInversion(intervals, a, setState){
     var newArr = [...intervals]
@@ -140,7 +134,7 @@ function createChordInversion(intervals, a, setState){
     playChord(chordInversion, setState);
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 function playChord(intervals, setState){
 

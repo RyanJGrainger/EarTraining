@@ -68,6 +68,7 @@
 #pianoContainer {
   width: 66%;
   margin: auto;
+  cursor: pointer;
 }
 
 .listenButtonContainer {

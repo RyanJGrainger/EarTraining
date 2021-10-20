@@ -12,23 +12,24 @@ var finalIntervals = [];
 
 function ChordListen(){
 
-    const [loading, setLoading] = useState(false);
+    const [pianoNotesPressed, setPianoNotesPressed] = useState([0]) // redo using context
+    const [loading, setLoading] = useState(true);
 
-    for (var i = 0; i < 23; i++){      ////preloads and plays all notes to resolve initial play lag
-         new Howl({
-            src: ["../sounds/" + soundLibary + "/note" + (i + 1) + ".wav"],
-            volume : 0
-        }) 
-    }
     useEffect(() => {
-        setLoading(true)
         setTimeout(() =>{
             setLoading(false)
         },3800)
 
     }, [])
 
-    const [pianoNotesPressed, setPianoNotesPressed] = useState([0]) // redo using context
+    for (var i = 0; i < 23; i++){      ////preloads notes to resolve initial play lag
+         new Howl({
+            src: ["../sounds/" + soundLibary + "/note" + (i + 1) + ".wav"],
+            volume : 0
+        }) 
+    }
+
+
 
     return(
 

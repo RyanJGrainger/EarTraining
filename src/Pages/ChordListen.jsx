@@ -126,10 +126,10 @@ function ChordButton(props) {
 
 function createChordInversion(intervals, a, setState){
     var newArr = [...intervals]
-    for(var i = 0; i < a; i++){
+    for(var i = 0; i < a; i++){  //each note up an octave 
         newArr[i]= newArr[i] + 12;
     }
-    newArr.sort((a, b) => a - b);
+    newArr.sort((a, b) => a - b); //normalizsed array to fit range of notes
     var chordInversion = newArr.map(x => x - (newArr[0] - 1))
     playChord(chordInversion, setState);
 }
@@ -137,29 +137,15 @@ function createChordInversion(intervals, a, setState){
 
 
 function playChord(intervals, setState){
-
-
-    var range = totalNotes - (intervals[intervals.length - 1] - 1);  // double check this
-    var randomKey = Math.floor(Math.random() * range); 
+    var range = totalNotes - (intervals[intervals.length - 1] - 1);  //sets max range of potential keys based on chord size
+    var randomKey = Math.floor(Math.random() * range); //generates random key signature within range
     finalIntervals = [];
 
     for (var i = 0; i < intervals.length; i++){
         finalIntervals.push(intervals[i] + randomKey)
     } 
 
-    setState(finalIntervals) /////yee
-
-    ////////////////// bass real quick
-    var bassNumber = finalIntervals[0]
-    if (finalIntervals[0] > 12){
-        bassNumber = bassNumber - 12
-    }
-    var bassNote = new Howl({
-        src: ["../sounds/bassNotes/note" + bassNumber + ".wav"],
-        volume : .3
-    })
-    bassNote.play()
-    ////////////////////
+    setState(finalIntervals) //observed by piano funtion for notesPressed visual update
 
     var noteArray = [];
 
@@ -174,12 +160,23 @@ function playChord(intervals, setState){
     noteArray.forEach((note, i) => {
         setTimeout(() => {
             note.play()
-          }, i * 58);
+          }, i * 58); 
     });
+
+        // bass 
+        var bassNumber = finalIntervals[0]
+        if (finalIntervals[0] > 12){
+            bassNumber = bassNumber - 12
+        }
+        var bassNote = new Howl({
+            src: ["../sounds/bassNotes/note" + bassNumber + ".wav"],
+            volume : .3
+        })
+        bassNote.play()
+        
 
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////
 
 function Piano(props){
     var keyLight = "note"

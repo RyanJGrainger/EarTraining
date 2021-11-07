@@ -4,17 +4,13 @@
     transition-timing-function: ease;
   }
 
-  #loader{
-    height: 525px;
-    width: 851px;
-    margin: auto;
-  }
+
 
 
 
   #chordsListen{
     height: 525px;
-    width: 851px;
+    width: 900px;
     margin: auto;
     margin-top: 8vh;
     // background: linear-gradient(0deg, rgba(45,45,45,1) 0%, rgba(45,45,45,1) 97%, rgba(0,0,0,1) 100%);
@@ -67,13 +63,18 @@
 
 
 #pianoContainer{
-  width: 66%;
+  width: 60%;
   margin: auto;
   // cursor: pointer; 
 }
 
 
+.drumsIcon{
+  height: 70px;
+  padding: 40px 30px 10px 0px;
+  cursor: pointer;
 
+}
 
 
 

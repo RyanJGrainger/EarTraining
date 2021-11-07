@@ -8,6 +8,19 @@ var soundLibary = "cleanKeys"
 var totalNotes = 24;
 var selectedInversion = 0
 var finalIntervals = [];
+var drums = new Howl({src: ["../sounds/drums.mp3"],volume : 0.25,loop: true})
+var noteArray = [];
+var bassNoteArray = [];
+preloadSounds();
+
+
+const handleKeyDown = (event) => {
+    if (event.key === "1") {
+      console.log("Submit Button Pressed");
+      
+    }
+  };
+
 
 
 function ChordListen(){
@@ -15,21 +28,16 @@ function ChordListen(){
     const [pianoNotesPressed, setPianoNotesPressed] = useState([0]) // redo using context
     const [loading, setLoading] = useState(true);
 
+
     useEffect(() => {
         setTimeout(() =>{
             setLoading(false)
-        },3800)
+        },0) //3800
+
+        window.addEventListener("keydown", handleKeyDown);
+
 
     }, [])
-
-    for (var i = 0; i < 23; i++){      ////preloads notes to resolve initial play lag
-         new Howl({
-            src: ["../sounds/" + soundLibary + "/note" + (i + 1) + ".wav"],
-            volume : 0
-        }) 
-    }
-
-
 
     return(
 
@@ -51,6 +59,7 @@ function ChordListen(){
                 <div id="chordListenControls">
                     <InversionControls/>
                     <Piano notesPressed={pianoNotesPressed} />
+                    <Drums/>
                 </div>
 
                 <div className="listenButtonContainer">
@@ -138,7 +147,8 @@ function createChordInversion(intervals, a, setState){
 
 function playChord(intervals, setState){
     var range = totalNotes - (intervals[intervals.length - 1] - 1);  //sets max range of potential keys based on chord size
-    var randomKey = Math.floor(Math.random() * range); //generates random key signature within range
+    var randomKey = Math.floor(Math.random() * 6); //generates random key signature within range
+    // var randomKey = Math.floor(Math.random() * range); // original, all notes!!!
     finalIntervals = [];
 
     for (var i = 0; i < intervals.length; i++){
@@ -147,33 +157,38 @@ function playChord(intervals, setState){
 
     setState(finalIntervals) //observed by piano funtion for notesPressed visual update
 
-    var noteArray = [];
-
-    for (var i = 0; i < finalIntervals.length; i++){
-        var note = new Howl({
-            src: ["../sounds/" + soundLibary + "/note" + (finalIntervals[i]) + ".wav"],
-            volume : (1 / finalIntervals.length)
-        })
-        noteArray.push(note)
-    }
+    finalIntervals.forEach((note, i) => {
+            setTimeout(() => {
+                noteArray[finalIntervals[i] - 1].play();
+            }, i * 62); 
+        });
     
-    noteArray.forEach((note, i) => {
-        setTimeout(() => {
-            note.play()
-          }, i * 58); 
-    });
 
-        // bass 
-        var bassNumber = finalIntervals[0]
-        if (finalIntervals[0] > 12){
-            bassNumber = bassNumber - 12
-        }
-        var bassNote = new Howl({
-            src: ["../sounds/bassNotes/note" + bassNumber + ".wav"],
-            volume : .3
-        })
-        bassNote.play()
-        
+        // var bassNumber = finalIntervals[1]
+        // if (finalIntervals[1] > 12){
+        //     bassNumber = bassNumber - 12
+        // }
+
+
+     bassNoteArray[finalIntervals[0] - 1].play();
+
+
+
+    //  setTimeout(() => {
+    //     bassNoteArray[finalIntervals[0] - 1].stop();
+    //     bassNoteArray[finalIntervals[2] - 1].play();
+
+    //     setTimeout(() => {
+    //         bassNoteArray[finalIntervals[2] - 1].stop();
+    //     }, 700); 
+
+    // }, 550); 
+
+
+
+
+
+
 
 }
 
@@ -216,4 +231,44 @@ function Piano(props){
         </div>
     </div>
     )
+}
+
+function Drums(){
+    const [color, setColor] = useState(0);
+    var buttonLight = { filter: "brightness(0) invert(1)"}
+    var buttonDark = {filter: "invert(12%) sepia(0%) saturate(4471%) hue-rotate(316deg) brightness(99%) contrast(86%)"}
+
+
+
+    function toggleDrums(){
+        drums.playing() ? drums.stop() : drums.play();
+        color === 0 ?  setColor(1) : setColor(0);
+   }
+
+
+    return(
+        <img onClick={toggleDrums} className="drumsIcon animated fadeIn" src="./css/drumsIcon.png" style= {color === 0 ? buttonLight : buttonDark}/>
+    )
+
+}
+
+
+
+function preloadSounds(){
+    for (var i = 0; i < 23; i++){      ////preloads notes to resolve initial play lag
+        var note = new Howl({
+           src: ["../sounds/" + soundLibary + "/note" + (i + 1) + ".wav"],
+           volume : 0.075
+       }) 
+       noteArray.push(note)
+    }
+    
+    for (var i = 0; i < 23; i++){     
+        var bassNote = new Howl({
+           src: ["../sounds/" + "bassNotes" + "/note" + (i + 1) + ".wav"],
+           volume : 0.3
+       }) 
+       bassNoteArray.push(bassNote)
+    }
+
 }

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap");
 * {
   -webkit-transition-property: all;
   transition-property: all;
@@ -8,7 +9,7 @@
 }
 
 #chordsListen {
-  height: 525px;
+  height: 530px;
   width: 900px;
   margin: auto;
   margin-top: 8vh;
@@ -66,13 +67,13 @@
 
 .drumsIcon {
   height: 70px;
-  padding: 40px 30px 10px 0px;
+  padding: 40px 35px 10px 0px;
   cursor: pointer;
 }
 
 .listenButtonContainer {
   padding-top: 0px;
-  width: 800px;
+  width: 775px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -84,6 +85,10 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  height: 363px;
+  overflow: auto;
+  padding-right: 30px;
+  padding-left: 30px;
 }
 
 .listenCircle {
@@ -92,20 +97,24 @@
   cursor: pointer;
   width: 90px;
   line-height: 80px;
-  font-size: 22px;
+  font-size: 30px;
   margin: 7px;
-  border: 7px solid #FFF;
+  border: 8px solid #FFF;
   overflow: hidden;
-  font-family: 'myFirstFont',Helvetica,'Helvetica Neue',Arial,sans-serif;
+  font-family: 'Raleway', sans-serif;
   text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.247), 0 4px 6px -2px rgba(0, 0, 0, 0.096);
+  -webkit-box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+          box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-#homeIcon {
-  position: absolute;
-  padding-top: 2.3vh;
-  margin-left: 6vw;
-  height: 7vh;
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: #8a6127;
 }
 /*# sourceMappingURL=chordListen.css.map */

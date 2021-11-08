@@ -11,36 +11,22 @@ var finalIntervals = [];
 var drums = new Howl({src: ["../sounds/drums.mp3"],volume : 0.25,loop: true})
 var noteArray = [];
 var bassNoteArray = [];
+var keySignature = 0
+
 preloadSounds();
 
 
-const handleKeyDown = (event) => {
-    if (event.key === "1") {
-      console.log("Submit Button Pressed");
-      
-    }
-  };
-
-
-
 function ChordListen(){
-
     const [pianoNotesPressed, setPianoNotesPressed] = useState([0]) // redo using context
     const [loading, setLoading] = useState(true);
-
 
     useEffect(() => {
         setTimeout(() =>{
             setLoading(false)
         },0) //3800
-
-        window.addEventListener("keydown", handleKeyDown);
-
-
     }, [])
 
     return(
-
         <div>
             {
                 loading ?
@@ -48,11 +34,9 @@ function ChordListen(){
                 <div className="animated fadeIn delay-1s" id="chordsListen">
                     <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
                     <ScaleLoader color={"#2d2d2d"} loading={loading} size={20} />
-
                 </div>
 
                 :
-            
 
             <div className="animated fadeIn" id="chordsListen">
 
@@ -79,16 +63,10 @@ function ChordListen(){
             </div>
             }
         </div>
-        
-        
     )
 }
 
 export default ChordListen;
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////
-
 
 
 function InversionControls(){
@@ -125,7 +103,8 @@ function ChordButton(props) {
             setButtonState("listenCircle animated rubberBand fast");
             setTimeout(function() {
                 setButtonState("listenCircle animated ");
-            }, 700)
+            }, 700);
+            stopChord();
             }} 
         className={buttonState}>{props.chordName}<sup>{props.chordFlavour}</sup></p>
     )
@@ -147,12 +126,41 @@ function createChordInversion(intervals, a, setState){
 
 function playChord(intervals, setState){
     var range = totalNotes - (intervals[intervals.length - 1] - 1);  //sets max range of potential keys based on chord size
-    var randomKey = Math.floor(Math.random() * 6); //generates random key signature within range
-    // var randomKey = Math.floor(Math.random() * range); // original, all notes!!!
+    // var key = Math.floor(Math.random() * range); // original, all notes!!!
+    var key = Math.floor(Math.random() * 6); //generates random key signature within range
+
+    var circleOfFifths = [1,8,3,10,5,12,7,2,9,4,11,6]
+    var circleOfFourths = [1,6,11,4,9,2,7,12,5,10,3,8]
+    // var test = [1,8,10,6,1,8,10,6,1,8,10,6]
+    // var test = [3,8,1,3,8,1,3,8,1,3,8,1]
+    // var test = [1, 10, 3, 8, 5, 10 , 3 , 8]
+
+    // var key = 0;
+
+    // moveInFourths()
+
+    function moveInFifths(){
+        key = circleOfFifths[keySignature] - 1;
+        if (keySignature === 11){
+            keySignature = 0
+        }else{
+            keySignature += 1;
+        }
+    }
+
+    function moveInFourths(){
+        key = circleOfFourths[keySignature] - 1;
+        if (keySignature === 11){
+            keySignature = 0
+        }else{
+            keySignature += 1;
+        }
+    }
+
     finalIntervals = [];
 
     for (var i = 0; i < intervals.length; i++){
-        finalIntervals.push(intervals[i] + randomKey)
+        finalIntervals.push(intervals[i] + key)
     } 
 
     setState(finalIntervals) //observed by piano funtion for notesPressed visual update
@@ -160,35 +168,13 @@ function playChord(intervals, setState){
     finalIntervals.forEach((note, i) => {
             setTimeout(() => {
                 noteArray[finalIntervals[i] - 1].play();
-            }, i * 62); 
+            }, i * 55); 
         });
+
+    setTimeout(() => {
+        bassNoteArray[finalIntervals[0] - 1].play();
+         }, i * 2); 
     
-
-        // var bassNumber = finalIntervals[1]
-        // if (finalIntervals[1] > 12){
-        //     bassNumber = bassNumber - 12
-        // }
-
-
-     bassNoteArray[finalIntervals[0] - 1].play();
-
-
-
-    //  setTimeout(() => {
-    //     bassNoteArray[finalIntervals[0] - 1].stop();
-    //     bassNoteArray[finalIntervals[2] - 1].play();
-
-    //     setTimeout(() => {
-    //         bassNoteArray[finalIntervals[2] - 1].stop();
-    //     }, 700); 
-
-    // }, 550); 
-
-
-
-
-
-
 
 }
 
@@ -227,6 +213,7 @@ function Piano(props){
                 <div id="18" class={props.notesPressed.includes(18) ? keyDark : keyLight}></div>
                 <div id="21" class={props.notesPressed.includes(21) ? keyDark : keyLight}></div>
                 <div id="23" class={props.notesPressed.includes(23) ? keyDark : keyLight}></div>
+
             </div>
         </div>
     </div>
@@ -236,29 +223,32 @@ function Piano(props){
 function Drums(){
     const [color, setColor] = useState(0);
     var buttonLight = { filter: "brightness(0) invert(1)"}
-    var buttonDark = {filter: "invert(12%) sepia(0%) saturate(4471%) hue-rotate(316deg) brightness(99%) contrast(86%)"}
-
-
+    // var buttonDark = {filter: "invert(12%) sepia(0%) saturate(4471%) hue-rotate(316deg) brightness(99%) contrast(86%)"}
+    var buttonDark = {filter: "invert(39%) sepia(65%) saturate(460%) hue-rotate(356deg) brightness(88%) contrast(90%)"}
 
     function toggleDrums(){
         drums.playing() ? drums.stop() : drums.play();
         color === 0 ?  setColor(1) : setColor(0);
    }
 
-
     return(
         <img onClick={toggleDrums} className="drumsIcon animated fadeIn" src="./css/drumsIcon.png" style= {color === 0 ? buttonLight : buttonDark}/>
     )
-
 }
 
 
+function stopChord(){
+    for (var i = 0; i < 23; i++){    
+        noteArray[i].stop();
+        bassNoteArray[i].stop();
+    }
+}
 
 function preloadSounds(){
     for (var i = 0; i < 23; i++){      ////preloads notes to resolve initial play lag
         var note = new Howl({
            src: ["../sounds/" + soundLibary + "/note" + (i + 1) + ".wav"],
-           volume : 0.075
+           volume : 0.075,
        }) 
        noteArray.push(note)
     }
@@ -272,3 +262,4 @@ function preloadSounds(){
     }
 
 }
+

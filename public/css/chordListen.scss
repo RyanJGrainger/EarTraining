@@ -4,12 +4,10 @@
     transition-timing-function: ease;
   }
 
-
-
-
+  @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap');
 
   #chordsListen{
-    height: 525px;
+    height: 530px;
     width: 900px;
     margin: auto;
     margin-top: 8vh;
@@ -24,6 +22,8 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+
+
   }
 
   #chordListenControls{
@@ -44,7 +44,8 @@
     margin: 0;
     font-size: 25px;
     color: #FFF;
-    // color: #2d2d2d;
+    // color: #2d2d2d; 
+    
   }
 
   #inversionButtonContainer{
@@ -58,6 +59,8 @@
     margin: 0;
     color: #FFF;
     padding-right: 15px;
+    
+    
   }
 
 
@@ -66,12 +69,13 @@
   width: 60%;
   margin: auto;
   // cursor: pointer; 
+  
 }
 
 
 .drumsIcon{
   height: 70px;
-  padding: 40px 30px 10px 0px;
+  padding: 40px 35px 10px 0px;
   cursor: pointer;
 
 }
@@ -80,11 +84,15 @@
 
   .listenButtonContainer {
     padding-top: 0px;
-    width: 800px;
+    width: 775px;
     display: inline-flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    height: 363px;
+    overflow: auto;
+    padding-right: 30px;
+    padding-left: 30px;
   }
 
   .listenCircle{
@@ -93,20 +101,42 @@
     cursor: pointer;
     width: 90px;
     line-height: 80px;
-    font-size: 22px;
+    // font-size: 22px;
+    font-size: 30px;
+
     margin: 7px;
-    border: 7px solid #FFF;
+    border: 8px solid #FFF;
     overflow: hidden;
-    font-family: 'myFirstFont',Helvetica,'Helvetica Neue',Arial,sans-serif;
+    // font-family: 'myFirstFont',Helvetica,'Helvetica Neue',Arial,sans-serif;
+    font-family: 'Raleway', sans-serif;
+    
     text-align: center;
-    text-transform: uppercase;
-    text-decoration: none;
+    // text-transform: uppercase;
+    // text-decoration: none;
+
+    // --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    // box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+
+    --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.247), 0 4px 6px -2px rgba(0, 0, 0, 0.096);
+box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+
+    // --tw-shadow: inset 0 6px 6px 0 rgba(0, 0, 0, 0.075);
+    // box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+
   }
 
 
-  #homeIcon {
-    position: absolute;
-    padding-top: 2.3vh;
-    margin-left: 6vw;
-    height: 7vh;
-}
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: #8a6127
+  }
+
+
+
+
+

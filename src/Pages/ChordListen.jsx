@@ -23,7 +23,7 @@ function ChordListen(){
     useEffect(() => {
         setTimeout(() =>{
             setLoading(false)
-        },0) //3800
+        },3400) //3800
     }, [])
 
     return(

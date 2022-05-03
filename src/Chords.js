@@ -18,9 +18,10 @@ var Chords = [
     {chordName:"6/9", chordFlavour: "", chordID:"6/9Button",intervals:[1, 5, 8, 10, 15]},
     {chordName:"add", chordFlavour: "9", chordID:"Add9Button",intervals:[1, 3, 5, 8]},
     {chordName:"m", chordFlavour: "M7", chordID:"MinorMajor7Button",intervals:[1, 4, 8, 12]},
-    {chordName:"7b5", chordFlavour: "", chordID:"Dominant7Flat5",intervals:[1, 5, 7, 11]},
-    {chordName:"7#9", chordFlavour: "", chordID:"Dominant7Sharp9",intervals:[1, 5, 8, 11, 16]},
-    {chordName:"M",chordFlavour: "7♯5",chordID:"Major7Sharp5",intervals:[1, 5, 9, 12]},
+    {chordName:"7b5", chordFlavour: "", chordID:"Dominant7Flat5Button",intervals:[1, 5, 7, 11]},
+    {chordName:"7#9", chordFlavour: "", chordID:"Dominant7Sharp9Button",intervals:[1, 5, 8, 11, 16]},
+    {chordName:"M",chordFlavour: "7♯5",chordID:"Major7Sharp5Button",intervals:[1, 5, 9, 12]},
+    {chordName:"9sus4",chordFlavour: "",chordID:"9Sus4Button",intervals:[1, 6, 8, 11, 15]},
     {chordName:"?",chordID:"Diminished7Button",intervals:[1, 4, 7, 10]},
     {chordName:"?",chordID:"Augmented7Button",intervals:[1, 5, 9, 11]},
 
